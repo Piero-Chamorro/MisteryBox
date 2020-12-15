@@ -372,19 +372,19 @@ section.soda {
     display: flex;
     justify-content: space-between;
     align-items: center; }
-    section.soda .content .txtBox {
+    section.soda .content .txt-box {
       position: relative;
       max-width: 600px;
       margin-right: 20px; }
-      section.soda .content .txtBox h2 {
+      section.soda .content .txt-box h2 {
         color: #fff;
         font-size: 3em;
         margin-bottom: 10px;
         line-height: 1.4em;
         font-weight: 700; }
-      section.soda .content .txtBox p {
+      section.soda .content .txt-box p {
         color: #fff; }
-      section.soda .content .txtBox a {
+      section.soda .content .txt-box a {
         position: relative;
         display: inline-block;
         margin-top: 30px;
@@ -397,50 +397,50 @@ section.soda {
         font-size: 24px;
         overflow: hidden;
         transition: 0.2s; }
-        section.soda .content .txtBox a:hover {
+        section.soda .content .txt-box a:hover {
           color: #255748;
           background: #2196f3;
           box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
           transition-delay: 1s; }
-        section.soda .content .txtBox a span {
+        section.soda .content .txt-box a span {
           position: absolute;
           display: block; }
-        section.soda .content .txtBox a span:nth-child(1) {
+        section.soda .content .txt-box a span:nth-child(1) {
           top: 0;
           left: -100%;
           width: 100%;
           height: 2px;
           background: linear-gradient(90deg, transparent, #2196f3); }
-        section.soda .content .txtBox a:hover span:nth-child(1) {
+        section.soda .content .txt-box a:hover span:nth-child(1) {
           left: 100%;
           transition: 1s; }
-        section.soda .content .txtBox a span:nth-child(3) {
+        section.soda .content .txt-box a span:nth-child(3) {
           bottom: 0;
           right: -100%;
           width: 100%;
           height: 2px;
           background: linear-gradient(270deg, transparent, #2196f3); }
-        section.soda .content .txtBox a:hover span:nth-child(3) {
+        section.soda .content .txt-box a:hover span:nth-child(3) {
           right: 100%;
           transition: 1s;
           transition-delay: 0.5s; }
-        section.soda .content .txtBox a span:nth-child(2) {
+        section.soda .content .txt-box a span:nth-child(2) {
           top: -100%;
           right: 0;
           width: 2px;
           height: 100%;
           background: linear-gradient(180deg, transparent, #2196f3); }
-        section.soda .content .txtBox a:hover span:nth-child(2) {
+        section.soda .content .txt-box a:hover span:nth-child(2) {
           top: 100%;
           transition: 1s;
           transition-delay: 0.25s; }
-        section.soda .content .txtBox a span:nth-child(4) {
+        section.soda .content .txt-box a span:nth-child(4) {
           bottom: -100%;
           left: 0;
           width: 2px;
           height: 100%;
           background: linear-gradient(360deg, transparent, #2196f3); }
-        section.soda .content .txtBox a:hover span:nth-child(4) {
+        section.soda .content .txt-box a:hover span:nth-child(4) {
           bottom: 100%;
           transition: 1s;
           transition-delay: 0.75s; }
@@ -455,11 +455,11 @@ section.soda {
       height: 460px;
       display: flex;
       justify-content: center; }
-  section.soda .content .imgBox {
+  section.soda .content .img-box {
     width: 500px;
     display: flex;
     justify-content: flex-end; }
-    section.soda .content .imgBox img {
+    section.soda .content .img-box img {
       max-width: 150px; }
   section.soda .swiper-slide img {
     position: absolute;
@@ -501,19 +501,19 @@ section.game {
     display: flex;
     justify-content: space-between;
     align-items: center; }
-    section.game .content .txtBox {
+    section.game .content .txt-box {
       position: relative;
       max-width: 600px;
       margin-right: 20px; }
-      section.game .content .txtBox h2 {
+      section.game .content .txt-box h2 {
         color: #fff;
         font-size: 3em;
         margin-bottom: 10px;
         line-height: 1.4em;
         font-weight: 700; }
-      section.game .content .txtBox p {
+      section.game .content .txt-box p {
         color: #fff; }
-      section.game .content .txtBox a {
+      section.game .content .txt-box a {
         position: relative;
         display: inline-block;
         margin-top: 30px;
@@ -526,69 +526,69 @@ section.game {
         font-size: 24px;
         overflow: hidden;
         transition: 0.2s; }
-        section.game .content .txtBox a:hover {
+        section.game .content .txt-box a:hover {
           color: #255748;
           background: #2196f3;
           box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
           transition-delay: 1s; }
-        section.game .content .txtBox a span {
+        section.game .content .txt-box a span {
           position: absolute;
           display: block; }
-        section.game .content .txtBox a span:nth-child(1) {
+        section.game .content .txt-box a span:nth-child(1) {
           top: 0;
           left: -100%;
           width: 100%;
           height: 2px;
           background: linear-gradient(90deg, transparent, #2196f3); }
-        section.game .content .txtBox a:hover span:nth-child(1) {
+        section.game .content .txt-box a:hover span:nth-child(1) {
           left: 100%;
           transition: 1s; }
-        section.game .content .txtBox a span:nth-child(3) {
+        section.game .content .txt-box a span:nth-child(3) {
           bottom: 0;
           right: -100%;
           width: 100%;
           height: 2px;
           background: linear-gradient(270deg, transparent, #2196f3); }
-        section.game .content .txtBox a:hover span:nth-child(3) {
+        section.game .content .txt-box a:hover span:nth-child(3) {
           right: 100%;
           transition: 1s;
           transition-delay: 0.5s; }
-        section.game .content .txtBox a span:nth-child(2) {
+        section.game .content .txt-box a span:nth-child(2) {
           top: -100%;
           right: 0;
           width: 2px;
           height: 100%;
           background: linear-gradient(180deg, transparent, #2196f3); }
-        section.game .content .txtBox a:hover span:nth-child(2) {
+        section.game .content .txt-box a:hover span:nth-child(2) {
           top: 100%;
           transition: 1s;
           transition-delay: 0.25s; }
-        section.game .content .txtBox a span:nth-child(4) {
+        section.game .content .txt-box a span:nth-child(4) {
           bottom: -100%;
           left: 0;
           width: 2px;
           height: 100%;
           background: linear-gradient(360deg, transparent, #2196f3); }
-        section.game .content .txtBox a:hover span:nth-child(4) {
+        section.game .content .txt-box a:hover span:nth-child(4) {
           bottom: 100%;
           transition: 1s;
           transition-delay: 0.75s; }
-    section.game .content .imgBox {
+    section.game .content .img-box {
       width: 500px;
       display: flex;
       justify-content: flex-end; }
-      section.game .content .imgBox .swiper-container {
+      section.game .content .img-box .swiper-container {
         width: 100%;
         padding-top: 50px;
         padding-bottom: 50px; }
-        section.game .content .imgBox .swiper-container .swiper-slide {
+        section.game .content .img-box .swiper-container .swiper-slide {
           background-position: center;
           background-size: cover;
           width: 300px;
           height: 500px;
           display: flex;
           justify-content: center; }
-          section.game .content .imgBox .swiper-container .swiper-slide img {
+          section.game .content .img-box .swiper-container .swiper-slide img {
             position: absolute;
             bottom: 0;
             max-height: 100%; }
@@ -699,7 +699,7 @@ section.probability {
       z-index: 1000;
       transform: perspective(2000px) rotate(-10deg);
       box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.5); }
-    .reviews .card .imgBox {
+    .reviews .card .img-box {
       position: relative;
       width: 100%;
       height: 100%;
@@ -708,9 +708,9 @@ section.probability {
       transform-origin: left;
       z-index: 1;
       transition: 1s; }
-    .reviews .card:hover .imgBox {
+    .reviews .card:hover .img-box {
       transform: rotateY(-135deg); }
-    .reviews .card .imgBox .img {
+    .reviews .card .img-box .img {
       position: absolute;
       top: 0;
       left: 0;
