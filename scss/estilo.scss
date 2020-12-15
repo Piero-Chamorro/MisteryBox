@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Cabin|Herr+Von+Muellerhoff|Source+Sans+Pro:400,900&display=swap');
 
-/*Global styles*/
+//Estilos Globales
 *,
 *::before,
 *::after{
@@ -23,16 +23,16 @@
 // variables
 $white:#fff;
 $alturamin: 100vh;
-$fondo: #003973;  /* fallback for old browsers */
-$fondo: -webkit-linear-gradient(to bottom, #E5E5BE, #003973);  /* Chrome 10-25, Safari 5.1-6 */
-$fondo: linear-gradient(to bottom, #E5E5BE, #003973); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-$boton: #DC2424;  /* fallback for old browsers */
-$boton: -webkit-linear-gradient(to bottom, #4A569D, #DC2424);  /* Chrome 10-25, Safari 5.1-6 */
-$boton: linear-gradient(to bottom, #4A569D, #DC2424); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+$fondo: #7474BF;  
+$fondo: -webkit-linear-gradient(to left, #348AC7, #7474BF);
+$fondo: linear-gradient(to left, #348AC7, #7474BF);
+$boton: #DC2424; 
+$boton: -webkit-linear-gradient(to bottom, #4A569D, #DC2424); 
+$boton: linear-gradient(to bottom, #4A569D, #DC2424); 
 $maxwidth:1100px;
 
 
+//estilos globales
 html{
   font-family: var(--body-font);
   font-size: 10px;
@@ -53,17 +53,20 @@ section{
 img{
   width: 100%;
   max-width: 100%;
+  user-select: none;
 }
 
-.logo img{
-  width: 75px;
-}
 a{
   text-decoration: none;
 }
 
 p{
   font-size: 1.6rem;
+}
+
+//Seccion del header
+.logo img{
+  width: 75px;
 }
 
 .container{
@@ -135,27 +138,25 @@ header{
   transition: opacity .5s;
 }
 
-.open .fa-times{
-  display: block;
-}
-
-.open .fa-bars{
-  display: none;
-}
-
-.open .nav-list{
-  transform: translateX(0);
-}
-
-.open .nav::before{
-  opacity: 1;
-  transform: scale(1);
+.open{
+      .fa-times{
+        display : block;
+      }
+      .fa-bars{
+        display: none;
+      }
+      .nav-list{
+        transform: translateX(0);
+      }
+      .nav::before{
+        opacity: 1;
+        transform: scale(1);
+      }
 }
 
 .nav-item{
   border-bottom: 2px solid rgba(255, 255, 255, .3);
 }
-
 
 .nav-link{
   display: block;
@@ -165,19 +166,16 @@ header{
   letter-spacing: 2px;
   margin-right: -2px;
   transition: color.5s;
+      &:hover{
+        color: var(--secondary-font-color);
+      }
 }
 
-.nav-link:hover{
-  color: var(--secondary-font-color);
-}
-
-
-
-/*home*/
+// Seccion de Inicio
 .home{
   width: 100%;
   height: 100vh;
-  background: url("img/home.jpg") center no-repeat;
+  background: url("img/home.jpg") center no-repeat;//imagen principal
   background-size: cover;
   display: flex;
   align-items: center; 
@@ -304,7 +302,7 @@ header{
   margin-top: 3.9rem;
 }
 
-.discorver-our-story .global-headline{
+.discover-box .global-headline{
   margin-top: 6.9rem;
 }
 
@@ -363,9 +361,10 @@ header{
 .body-btn:focus::before{
   background-color: var(--main-font-color-dark);
 }
-/* task */
-.tasteful-recipes{
-  background: url("images/tasteful-recipes.jpg") center no-repeat;
+
+// Mistery-presentacion
+.mistery{
+  background: url("img/presentacion-cajas.jpg") center no-repeat;
   background-size: cover;
 }
 
@@ -375,159 +374,48 @@ header{
   align-items: center;
 }
 
-/* menu */
 .image-group{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1.5rem;
 }
 
-.discorver-our-menu .box-description{
+.discover-box .box-description{
   padding-top: 3rem;
   margin-bottom: 0;
 }
+
 /* aa */
 .perfect-blend{
-  background: url("images/perfect-blend.jpg") center no-repeat;
+  background: url("img/presentacion-porcentual.gif") center no-repeat;
   background-size: cover;
 }
 
-
-/*Cajas Misteriosas*/
-.mistery {
-	padding-top: 17%;
-	padding-bottom: 120px;
-	text-align: center;
-    h1{
-      padding: 20px;
-      font-size: 50px;
-      text-align: center;
-      color: #0A1526;
-    } 
-    p{
-      margin-left: 80px;
-      margin-right: 80px;  
-      margin-bottom: 1em;
-      font: 120% sans-serif;
-      text-align: justify;
-      color: #153158;
-    }    
+// Presentacion de cliente-review
+.client-review{
+  background: url("img/presentacion-cliente-reviews.jpg") center no-repeat;
+  background-size: cover;
+        .sub-headline{
+          color: #345d92;
+          font-weight: 600;
+          font-size: 11rem;
+        }
+        .animate-bottom{
+          h1{
+            -webkit-text-stroke: 2px #0A1526;
+            font-size: 2.5rem;
+            padding: 20px;
+            
+          }
+          a{
+            -webkit-text-stroke: 1px #0A1526;
+            color: var(--secondary-font-color);
+            letter-spacing: 0;
+          }
+        }
 }
 
-//SECCION DE JUEGOS
-section.games {
-  position: relative;
-  width: 100%;
-  min-height:$alturamin;
-  padding: 200px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #161616;
-      .circle{
-        position:absolute;
-        top:0;
-        left:0;
-        width:100%;
-        height:100%;
-        background:#7dbbf4;
-        clip-path: circle(70% at right -20%);
-      }
-      h1 {
-        color: #7dbbf4;
-        font-size: 80px;
-      }
-      a{
-        position: relative;
-        display: inline-block;
-        padding: 15px 30px;
-        color: #2196f3;
-        text-transform: uppercase;
-        letter-spacing: 4px;
-        text-decoration: none;
-        font-size: 24px;
-        overflow: hidden;
-        transition: 0.2s;
-      }
-      a:hover{
-        color: #255748;
-        background: #2196f3;
-        box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
-        transition-delay: 1s;
-      }
-      a span{
-        position: absolute;
-        display: block;
-      }
-      a span:nth-child(1){
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 2px;
-        background: linear-gradient(90deg,transparent,#2196f3);
-      }
-      a:hover span:nth-child(1){
-        left: 100%;
-        transition: 1s;
-      }
-      a span:nth-child(3){
-        bottom: 0;
-        right: -100%;
-        width: 100%;
-        height: 2px;
-        background: linear-gradient(270deg,transparent,#2196f3);
-      }
-      a:hover span:nth-child(3){
-        right: 100%;
-        transition: 1s;
-        transition-delay: 0.5s;
-      }
-      a span:nth-child(2){
-        top: -100%;
-        right: 0;
-        width: 2px;
-        height: 100%;
-        background: linear-gradient(180deg,transparent,#2196f3);
-      }
-      a:hover span:nth-child(2){
-        top: 100%;
-        transition: 1s;
-        transition-delay: 0.25s;
-      }
-      a span:nth-child(4){
-        bottom: -100%;
-        left: 0;
-        width: 2px;
-        height: 100%;
-        background: linear-gradient(360deg,transparent,#2196f3);
-      }
-      a:hover span:nth-child(4){
-        bottom: 100%;
-        transition: 1s;
-        transition-delay: 0.75s;
-      }
-      .description{
-          p{
-            padding-right: auto;
-            padding-left: auto;
-            text-align: center;
-            justify-content: center;
-            color: #c4e0fa;
-            font-size: 40px;
-          }  
-      } 
-      .warning{
-            p{
-              font-size: 10px;
-              text-align: center;
-              justify-content: center;
-              color:#FFFFFF;
-              padding-bottom: 100px;
-            }
-      }
-}//fin de la seccion
-
-// Seccion de sodas
+// Seccion de gaseosas
 section.soda {
   position: relative;
   width: 100%;
@@ -546,61 +434,146 @@ section.soda {
           background:#e51e2a;
           clip-path: circle(70% at right -20%);
         }
-}//Fin de soda
-
-.logosoda{
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  padding:40px 100px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-        img{
-          position:relative;
-          max-width:$maxwidth - 950;
+        .logosoda{
+          position:absolute;
+          top:0;
+          left:0;
+          width:100%;
+          padding:40px 100px;
+          display:flex;
+          justify-content:space-between;
+          align-items:center;
+                img{
+                  position:relative;
+                  max-width:$maxwidth - 950;
+                }
         }
-}
-
-
-.content{
-  position:relative;
-  width:100%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-        .txtBox{
+        .content{
           position:relative;
-          max-width:$maxwidth - 500;
-          margin-right:20px;
-                  h2{
-                      color:$white;
-                      font-size:3em;
-                      margin-bottom:10px;
-                      line-height:1.4em;
-                      font-weight:700;
-                  }
-                  p{
-                    color:$white; 
-                  }
-                  a{
-                      display:inline-block;
-                      margin-top:20px;
-                      padding:8px 20px;
-                      background:#e51e2a;
-                      color:$white;
-                      border-radius:40px;
-                      font-weight:500;
-                      letter-spacing:1px;
-                      text-decoration:none;
-                  }
+          width:100%;
+          display:flex;
+          justify-content:space-between;
+          align-items:center;
+                .txtBox{
+                  position:relative;
+                  max-width:$maxwidth - 500;
+                  margin-right:20px;
+                          h2{
+                              color:$white;
+                              font-size:3em;
+                              margin-bottom:10px;
+                              line-height:1.4em;
+                              font-weight:700;
+                          }
+                          p{
+                            color:$white; 
+                          }
+                          a{
+                            position: relative;
+                            display: inline-block;
+                            margin-top: 30px;
+                            padding: 15px 30px;
+                            color: #2196f3; 
+                            text-transform: uppercase;
+                            font-weight:500;
+                            letter-spacing: 4px;
+                            text-decoration:none;
+                            font-size: 24px;
+                            overflow: hidden;
+                            transition: 0.2s;
+                                  &:hover{
+                                    color: #255748;
+                                    background: #2196f3;
+                                    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+                                    transition-delay: 1s;
+                                  }
+                                  span{
+                                    position: absolute;
+                                    display: block;
+                                  }
+                                  span:nth-child(1){
+                                    top: 0;
+                                    left: -100%;
+                                    width: 100%;
+                                    height: 2px;
+                                    background: linear-gradient(90deg,transparent,#2196f3);
+                                  }
+                                  &:hover span:nth-child(1){
+                                    left: 100%;
+                                    transition: 1s;
+                                  }
+                                  & span:nth-child(3){
+                                    bottom: 0;
+                                    right: -100%;
+                                    width: 100%;
+                                    height: 2px;
+                                    background: linear-gradient(270deg,transparent,#2196f3);
+                                  }
+                                  &:hover span:nth-child(3){
+                                    right: 100%;
+                                    transition: 1s;
+                                    transition-delay: 0.5s;
+                                  }
+                                  & span:nth-child(2){
+                                    top: -100%;
+                                    right: 0;
+                                    width: 2px;
+                                    height: 100%;
+                                    background: linear-gradient(180deg,transparent,#2196f3);
+                                  }
+                                  &:hover span:nth-child(2){
+                                    top: 100%;
+                                    transition: 1s;
+                                    transition-delay: 0.25s;
+                                  }
+                                  & span:nth-child(4){
+                                    bottom: -100%;
+                                    left: 0;
+                                    width: 2px;
+                                    height: 100%;
+                                    background: linear-gradient(360deg,transparent,#2196f3);
+                                  }
+                                  &:hover span:nth-child(4){
+                                    bottom: 100%;
+                                    transition: 1s;
+                                    transition-delay: 0.75s;
+                                  }
+                          }
+                }
         }
-}
+        .swiper-container{
+          width: 100%;
+          padding-top: 50px;
+          padding-bottom: 50px;
+                .swiper-slide {
+                  background-position: center;
+                  background-size: cover;
+                  width: 180px;
+                  height: 460px;
+                  display:flex;
+                  justify-content:center;
+                }
+          }
+          .content{
+                  .imgBox{
+                    width: 500px;
+                    display: flex;
+                    justify-content: flex-end;
+                          img{
+                            max-width:($maxwidth - 950);
+                          }      
+                  }
+          }
+          .swiper-slide img{
+            position:absolute;
+            bottom:0;
+            max-height:100%;
+          }
+}//Fin de seccion sodas
 
 
-// Seccion de sodas
-section.secret {
+// Seccion de juegos
+section.game {
   position: relative;
   width: 100%;
   min-height:$alturamin;
@@ -616,116 +589,151 @@ section.secret {
           width:100%;
           height:100%;
           background:#7DBBF4;
-          clip-path: circle(70% at right -20%);
+          clip-path: circle(70% at left -20%);
         }
-}
-.logosoda{
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  padding:40px 100px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-        img{
-          position:relative;
-          max-width:$maxwidth - 950;
+        .logosoda{
+          position:absolute;
+          top:0;
+          left:0;
+          width:100%;
+          padding:40px 100px;
+          display:flex;
+          justify-content:space-between;
+          align-items:center;
+                img{
+                  position:relative;
+                  max-width:$maxwidth - 950;
+                }
         }
-}
-
-
-.content{
-  position:relative;
-  width:100%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-        .txtBox{
-          position:relative;
-          max-width:$maxwidth - 500;
-          margin-right:20px;
-                  h2{
-                      color:$white;
-                      font-size:3em;
-                      margin-bottom:10px;
-                      line-height:1.4em;
-                      font-weight:700;
-                  }
-                  p{
-                    color:$white; 
-                  }
-                  a{
-                      display:inline-block;
-                      margin-top:20px;
-                      padding:8px 20px;
-                      background:#7DBBF4;
-                      color:$white;
-                      border-radius:40px;
-                      font-weight:500;
-                      letter-spacing:1px;
-                      text-decoration:none;
-                  }
+        .content{
+          position: relative;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+                .txtBox{
+                  position:relative;
+                  max-width:$maxwidth - 500;
+                  margin-right:20px;
+                          h2{
+                              color:$white;
+                              font-size:3em;
+                              margin-bottom:10px;
+                              line-height:1.4em;
+                              font-weight:700;
+                          }
+                          p{
+                            color:$white; 
+                          }
+                          a{
+                              position: relative;
+                              display: inline-block;
+                              margin-top: 30px;
+                              padding: 15px 30px;
+                              color: #2196f3; 
+                              text-transform: uppercase;
+                              font-weight:500;
+                              letter-spacing: 4px;
+                              text-decoration:none;
+                              font-size: 24px;
+                              overflow: hidden;
+                              transition: 0.2s;
+                                    &:hover{
+                                      color: #255748;
+                                      background: #2196f3;
+                                      box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+                                      transition-delay: 1s;
+                                    }
+                                    span{
+                                      position: absolute;
+                                      display: block;
+                                    }
+                                    span:nth-child(1){
+                                      top: 0;
+                                      left: -100%;
+                                      width: 100%;
+                                      height: 2px;
+                                      background: linear-gradient(90deg,transparent,#2196f3);
+                                    }
+                                    &:hover span:nth-child(1){
+                                      left: 100%;
+                                      transition: 1s;
+                                    }
+                                    & span:nth-child(3){
+                                      bottom: 0;
+                                      right: -100%;
+                                      width: 100%;
+                                      height: 2px;
+                                      background: linear-gradient(270deg,transparent,#2196f3);
+                                    }
+                                    &:hover span:nth-child(3){
+                                      right: 100%;
+                                      transition: 1s;
+                                      transition-delay: 0.5s;
+                                    }
+                                    & span:nth-child(2){
+                                      top: -100%;
+                                      right: 0;
+                                      width: 2px;
+                                      height: 100%;
+                                      background: linear-gradient(180deg,transparent,#2196f3);
+                                    }
+                                    &:hover span:nth-child(2){
+                                      top: 100%;
+                                      transition: 1s;
+                                      transition-delay: 0.25s;
+                                    }
+                                    & span:nth-child(4){
+                                      bottom: -100%;
+                                      left: 0;
+                                      width: 2px;
+                                      height: 100%;
+                                      background: linear-gradient(360deg,transparent,#2196f3);
+                                    }
+                                    &:hover span:nth-child(4){
+                                      bottom: 100%;
+                                      transition: 1s;
+                                      transition-delay: 0.75s;
+                                    }
+                          }
+                }
+                .imgBox{
+                  width: 500px;
+                  display: flex;
+                  justify-content: flex-end;
+                        .swiper-container{
+                          width: 100%;
+                          padding-top: 50px;
+                          padding-bottom: 50px;
+                                .swiper-slide {
+                                  background-position: center;
+                                  background-size: cover;
+                                  width: 300px;
+                                  height: 500px;
+                                  display:flex;
+                                  justify-content:center;
+                                        img{
+                                          position: absolute;
+                                          bottom: 0;  
+                                          max-height: 100%;
+                                        }
+                                }
+                        }
+                }
         }
-}//Fin de soda
+}//Fin de seccion juegos
 
-    
-// slider
-.swiper-container {
-  width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
 
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 180px;
-  height: 460px;
-  display:flex;
-  justify-content:center;
-}
-.content{
-      .imgBox{
-        width:500px;
-        display:flex;
-        justify-content:flex-end;
-              img{
-                max-width:($maxwidth - 950);
-              }
-      }
-}
-
-.swiper-slide img{
-  position:absolute;
-  bottom:0;
-  max-height:100%;
-}
-
+//Slider
 .swiper-container-3d{
-      .swiper-slide-shadow-left,
-      .swiper-slide-shadow-right{
-        background-image:none;
-      }
+  .swiper-slide-shadow-left,
+  .swiper-slide-shadow-right{
+    background-image:none;
+  }
 } 
 
-@media (max-width: $maxwidth - 109) {
-  section.soda{
-    padding:150px 40px;
-  }
-  .content{
-    flex-direction:column;
-          .txtBox, .imgBox{
-            max-width:100%;
-          }
-  }
-  .swiper-slide{
-    height:300px;
-  } 
-}
 
-
-/*Probabilidades*/
+// Seccion de probabilidades
 section.probability{
   width:100%;
         .container{
@@ -811,17 +819,11 @@ section.probability{
 /*Reseñas*/
 .reviews{
 	max-width: $maxwidth - 100;
-	margin: 100px auto;
+	margin: 0 auto;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
 	padding-top: 8%;
-      h1{
-        text-align: center;
-        padding: 20px;
-        font-size: 50px;
-        font-family: Segoe UI;
-      }
       /*.p{
         margin-left: 80px;
         margin-right: 80px; 
@@ -1076,13 +1078,14 @@ footer{
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  margin-left: 20.5rem;
+  margin-left: 10.5rem;
 }
 
 .content-copy{
   width: 100%;
   background: #101010;
-  padding: 8px 100px;
+  padding: 8px 40px;
+  font-size: 1.5rem;
   text-align: center;
       .copyright{
           color: #999;
@@ -1093,6 +1096,3 @@ footer{
             }
       }
 }
-
-  // .content-copy{
-  //   padding: 8px 40px;

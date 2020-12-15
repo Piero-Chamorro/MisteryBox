@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Cabin|Herr+Von+Muellerhoff|Source+Sans+Pro:400,900&display=swap");
-/*Global styles*/
 *,
 *::before,
 *::after {
@@ -18,18 +17,12 @@
   --secondary-font-color: #c59d5f;
   --body-font-color: #515151; }
 
-/* fallback for old browsers */
-/* Chrome 10-25, Safari 5.1-6 */
-/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-/* fallback for old browsers */
-/* Chrome 10-25, Safari 5.1-6 */
-/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 html {
   font-family: var(--body-font);
   font-size: 10px;
   color: #031321;
   scroll-behavior: smooth;
-  background: linear-gradient(to bottom, #E5E5BE, #003973); }
+  background: linear-gradient(to left, #348AC7, #7474BF); }
 
 body {
   overflow-x: hidden; }
@@ -40,16 +33,17 @@ section {
 
 img {
   width: 100%;
-  max-width: 100%; }
-
-.logo img {
-  width: 75px; }
+  max-width: 100%;
+  user-select: none; }
 
 a {
   text-decoration: none; }
 
 p {
   font-size: 1.6rem; }
+
+.logo img {
+  width: 75px; }
 
 .container {
   width: 100%;
@@ -137,11 +131,9 @@ header {
   letter-spacing: 2px;
   margin-right: -2px;
   transition: color 0.5s; }
+  .nav-link:hover {
+    color: var(--secondary-font-color); }
 
-.nav-link:hover {
-  color: var(--secondary-font-color); }
-
-/*home*/
 .home {
   width: 100%;
   height: 100vh;
@@ -256,7 +248,7 @@ header {
   text-align: center;
   margin-top: 3.9rem; }
 
-.discorver-our-story .global-headline {
+.discover-box .global-headline {
   margin-top: 6.9rem; }
 
 .global-headline .asterisk {
@@ -306,9 +298,8 @@ header {
 .body-btn:focus::before {
   background-color: var(--main-font-color-dark); }
 
-/* task */
-.tasteful-recipes {
-  background: url("images/tasteful-recipes.jpg") center no-repeat;
+.mistery {
+  background: url("img/presentacion-cajas.jpg") center no-repeat;
   background-size: cover; }
 
 .between {
@@ -316,130 +307,35 @@ header {
   display: flex;
   align-items: center; }
 
-/* menu */
 .image-group {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1.5rem; }
 
-.discorver-our-menu .box-description {
+.discover-box .box-description {
   padding-top: 3rem;
   margin-bottom: 0; }
 
 /* aa */
 .perfect-blend {
-  background: url("images/perfect-blend.jpg") center no-repeat;
+  background: url("img/presentacion-porcentual.gif") center no-repeat;
   background-size: cover; }
 
-/*Cajas Misteriosas*/
-.mistery {
-  padding-top: 17%;
-  padding-bottom: 120px;
-  text-align: center; }
-  .mistery h1 {
-    padding: 20px;
-    font-size: 50px;
-    text-align: center;
-    color: #0A1526; }
-  .mistery p {
-    margin-left: 80px;
-    margin-right: 80px;
-    margin-bottom: 1em;
-    font: 120% sans-serif;
-    text-align: justify;
-    color: #153158; }
-
-section.games {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  padding: 200px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #161616; }
-  section.games .circle {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #7dbbf4;
-    clip-path: circle(70% at right -20%); }
-  section.games h1 {
-    color: #7dbbf4;
-    font-size: 80px; }
-  section.games a {
-    position: relative;
-    display: inline-block;
-    padding: 15px 30px;
-    color: #2196f3;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    text-decoration: none;
-    font-size: 24px;
-    overflow: hidden;
-    transition: 0.2s; }
-  section.games a:hover {
-    color: #255748;
-    background: #2196f3;
-    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
-    transition-delay: 1s; }
-  section.games a span {
-    position: absolute;
-    display: block; }
-  section.games a span:nth-child(1) {
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #2196f3); }
-  section.games a:hover span:nth-child(1) {
-    left: 100%;
-    transition: 1s; }
-  section.games a span:nth-child(3) {
-    bottom: 0;
-    right: -100%;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(270deg, transparent, #2196f3); }
-  section.games a:hover span:nth-child(3) {
-    right: 100%;
-    transition: 1s;
-    transition-delay: 0.5s; }
-  section.games a span:nth-child(2) {
-    top: -100%;
-    right: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(180deg, transparent, #2196f3); }
-  section.games a:hover span:nth-child(2) {
-    top: 100%;
-    transition: 1s;
-    transition-delay: 0.25s; }
-  section.games a span:nth-child(4) {
-    bottom: -100%;
-    left: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(360deg, transparent, #2196f3); }
-  section.games a:hover span:nth-child(4) {
-    bottom: 100%;
-    transition: 1s;
-    transition-delay: 0.75s; }
-  section.games .description p {
-    padding-right: auto;
-    padding-left: auto;
-    text-align: center;
-    justify-content: center;
-    color: #c4e0fa;
-    font-size: 40px; }
-  section.games .warning p {
-    font-size: 10px;
-    text-align: center;
-    justify-content: center;
-    color: #FFFFFF;
-    padding-bottom: 100px; }
+.client-review {
+  background: url("img/presentacion-cliente-reviews.jpg") center no-repeat;
+  background-size: cover; }
+  .client-review .sub-headline {
+    color: #345d92;
+    font-weight: 600;
+    font-size: 11rem; }
+  .client-review .animate-bottom h1 {
+    -webkit-text-stroke: 2px #0A1526;
+    font-size: 2.5rem;
+    padding: 20px; }
+  .client-review .animate-bottom a {
+    -webkit-text-stroke: 1px #0A1526;
+    color: var(--secondary-font-color);
+    letter-spacing: 0; }
 
 section.soda {
   position: relative;
@@ -458,50 +354,119 @@ section.soda {
     height: 100%;
     background: #e51e2a;
     clip-path: circle(70% at right -20%); }
-
-.logosoda {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 40px 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
-  .logosoda img {
+  section.soda .logosoda {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    section.soda .logosoda img {
+      position: relative;
+      max-width: 150px; }
+  section.soda .content {
     position: relative;
-    max-width: 150px; }
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    section.soda .content .txtBox {
+      position: relative;
+      max-width: 600px;
+      margin-right: 20px; }
+      section.soda .content .txtBox h2 {
+        color: #fff;
+        font-size: 3em;
+        margin-bottom: 10px;
+        line-height: 1.4em;
+        font-weight: 700; }
+      section.soda .content .txtBox p {
+        color: #fff; }
+      section.soda .content .txtBox a {
+        position: relative;
+        display: inline-block;
+        margin-top: 30px;
+        padding: 15px 30px;
+        color: #2196f3;
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: 4px;
+        text-decoration: none;
+        font-size: 24px;
+        overflow: hidden;
+        transition: 0.2s; }
+        section.soda .content .txtBox a:hover {
+          color: #255748;
+          background: #2196f3;
+          box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+          transition-delay: 1s; }
+        section.soda .content .txtBox a span {
+          position: absolute;
+          display: block; }
+        section.soda .content .txtBox a span:nth-child(1) {
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 2px;
+          background: linear-gradient(90deg, transparent, #2196f3); }
+        section.soda .content .txtBox a:hover span:nth-child(1) {
+          left: 100%;
+          transition: 1s; }
+        section.soda .content .txtBox a span:nth-child(3) {
+          bottom: 0;
+          right: -100%;
+          width: 100%;
+          height: 2px;
+          background: linear-gradient(270deg, transparent, #2196f3); }
+        section.soda .content .txtBox a:hover span:nth-child(3) {
+          right: 100%;
+          transition: 1s;
+          transition-delay: 0.5s; }
+        section.soda .content .txtBox a span:nth-child(2) {
+          top: -100%;
+          right: 0;
+          width: 2px;
+          height: 100%;
+          background: linear-gradient(180deg, transparent, #2196f3); }
+        section.soda .content .txtBox a:hover span:nth-child(2) {
+          top: 100%;
+          transition: 1s;
+          transition-delay: 0.25s; }
+        section.soda .content .txtBox a span:nth-child(4) {
+          bottom: -100%;
+          left: 0;
+          width: 2px;
+          height: 100%;
+          background: linear-gradient(360deg, transparent, #2196f3); }
+        section.soda .content .txtBox a:hover span:nth-child(4) {
+          bottom: 100%;
+          transition: 1s;
+          transition-delay: 0.75s; }
+  section.soda .swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px; }
+    section.soda .swiper-container .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 180px;
+      height: 460px;
+      display: flex;
+      justify-content: center; }
+  section.soda .content .imgBox {
+    width: 500px;
+    display: flex;
+    justify-content: flex-end; }
+    section.soda .content .imgBox img {
+      max-width: 150px; }
+  section.soda .swiper-slide img {
+    position: absolute;
+    bottom: 0;
+    max-height: 100%; }
 
-.content {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
-  .content .txtBox {
-    position: relative;
-    max-width: 600px;
-    margin-right: 20px; }
-    .content .txtBox h2 {
-      color: #fff;
-      font-size: 3em;
-      margin-bottom: 10px;
-      line-height: 1.4em;
-      font-weight: 700; }
-    .content .txtBox p {
-      color: #fff; }
-    .content .txtBox a {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 8px 20px;
-      background: #e51e2a;
-      color: #fff;
-      border-radius: 40px;
-      font-weight: 500;
-      letter-spacing: 1px;
-      text-decoration: none; }
-
-section.secret {
+section.game {
   position: relative;
   width: 100%;
   min-height: 100vh;
@@ -510,97 +475,128 @@ section.secret {
   justify-content: space-between;
   align-items: center;
   background: #0A1526; }
-  section.secret .circle {
+  section.game .circle {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: #7DBBF4;
-    clip-path: circle(70% at right -20%); }
-
-.logosoda {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 40px 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
-  .logosoda img {
+    clip-path: circle(70% at left -20%); }
+  section.game .logosoda {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    section.game .logosoda img {
+      position: relative;
+      max-width: 150px; }
+  section.game .content {
     position: relative;
-    max-width: 150px; }
-
-.content {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
-  .content .txtBox {
-    position: relative;
-    max-width: 600px;
-    margin-right: 20px; }
-    .content .txtBox h2 {
-      color: #fff;
-      font-size: 3em;
-      margin-bottom: 10px;
-      line-height: 1.4em;
-      font-weight: 700; }
-    .content .txtBox p {
-      color: #fff; }
-    .content .txtBox a {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 8px 20px;
-      background: #7DBBF4;
-      color: #fff;
-      border-radius: 40px;
-      font-weight: 500;
-      letter-spacing: 1px;
-      text-decoration: none; }
-
-.swiper-container {
-  width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px; }
-
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 180px;
-  height: 460px;
-  display: flex;
-  justify-content: center; }
-
-.content .imgBox {
-  width: 500px;
-  display: flex;
-  justify-content: flex-end; }
-  .content .imgBox img {
-    max-width: 150px; }
-
-.swiper-slide img {
-  position: absolute;
-  bottom: 0;
-  max-height: 100%; }
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    section.game .content .txtBox {
+      position: relative;
+      max-width: 600px;
+      margin-right: 20px; }
+      section.game .content .txtBox h2 {
+        color: #fff;
+        font-size: 3em;
+        margin-bottom: 10px;
+        line-height: 1.4em;
+        font-weight: 700; }
+      section.game .content .txtBox p {
+        color: #fff; }
+      section.game .content .txtBox a {
+        position: relative;
+        display: inline-block;
+        margin-top: 30px;
+        padding: 15px 30px;
+        color: #2196f3;
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: 4px;
+        text-decoration: none;
+        font-size: 24px;
+        overflow: hidden;
+        transition: 0.2s; }
+        section.game .content .txtBox a:hover {
+          color: #255748;
+          background: #2196f3;
+          box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+          transition-delay: 1s; }
+        section.game .content .txtBox a span {
+          position: absolute;
+          display: block; }
+        section.game .content .txtBox a span:nth-child(1) {
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 2px;
+          background: linear-gradient(90deg, transparent, #2196f3); }
+        section.game .content .txtBox a:hover span:nth-child(1) {
+          left: 100%;
+          transition: 1s; }
+        section.game .content .txtBox a span:nth-child(3) {
+          bottom: 0;
+          right: -100%;
+          width: 100%;
+          height: 2px;
+          background: linear-gradient(270deg, transparent, #2196f3); }
+        section.game .content .txtBox a:hover span:nth-child(3) {
+          right: 100%;
+          transition: 1s;
+          transition-delay: 0.5s; }
+        section.game .content .txtBox a span:nth-child(2) {
+          top: -100%;
+          right: 0;
+          width: 2px;
+          height: 100%;
+          background: linear-gradient(180deg, transparent, #2196f3); }
+        section.game .content .txtBox a:hover span:nth-child(2) {
+          top: 100%;
+          transition: 1s;
+          transition-delay: 0.25s; }
+        section.game .content .txtBox a span:nth-child(4) {
+          bottom: -100%;
+          left: 0;
+          width: 2px;
+          height: 100%;
+          background: linear-gradient(360deg, transparent, #2196f3); }
+        section.game .content .txtBox a:hover span:nth-child(4) {
+          bottom: 100%;
+          transition: 1s;
+          transition-delay: 0.75s; }
+    section.game .content .imgBox {
+      width: 500px;
+      display: flex;
+      justify-content: flex-end; }
+      section.game .content .imgBox .swiper-container {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px; }
+        section.game .content .imgBox .swiper-container .swiper-slide {
+          background-position: center;
+          background-size: cover;
+          width: 300px;
+          height: 500px;
+          display: flex;
+          justify-content: center; }
+          section.game .content .imgBox .swiper-container .swiper-slide img {
+            position: absolute;
+            bottom: 0;
+            max-height: 100%; }
 
 .swiper-container-3d .swiper-slide-shadow-left,
 .swiper-container-3d .swiper-slide-shadow-right {
   background-image: none; }
 
-@media (max-width: 991px) {
-  section.soda {
-    padding: 150px 40px; }
-  .content {
-    flex-direction: column; }
-    .content .txtBox, .content .imgBox {
-      max-width: 100%; }
-  .swiper-slide {
-    height: 300px; } }
-
-/*Probabilidades*/
 section.probability {
   width: 100%; }
   section.probability .container {
@@ -670,7 +666,7 @@ section.probability {
 /*Reseñas*/
 .reviews {
   max-width: 1000px;
-  margin: 100px auto;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -683,11 +679,6 @@ section.probability {
         text-align: justify;
       }
       */ }
-  .reviews h1 {
-    text-align: center;
-    padding: 20px;
-    font-size: 50px;
-    font-family: Segoe UI; }
   .reviews a {
     margin-left: 80px;
     margin-right: 80px;
@@ -905,12 +896,13 @@ footer {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  margin-left: 20.5rem; }
+  margin-left: 10.5rem; }
 
 .content-copy {
   width: 100%;
   background: #101010;
-  padding: 8px 100px;
+  padding: 8px 40px;
+  font-size: 1.5rem;
   text-align: center; }
   .content-copy .copyright {
     color: #999; }

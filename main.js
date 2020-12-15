@@ -39,3 +39,21 @@ sr.reveal('.animate-bottom', {
     distance: '25rem',
     delay: 600
 });
+
+
+
+// function toggleMenu(){
+//     const menuToggle  = document.querySelector('.toggle');
+//     const navigation  = document.querySelector('.navigation')
+//     menuToggle.classList.toggle('active')
+//     navigation.classList.toggle('active')
+// }
+
+// Para porcentajes
+function toggle(){
+    var blur = document.getElementById('blur');
+	blur.classList.toggle('active');	
+	var popup = document.getElementById('popup');
+	popup.classList.toggle('active');
+}
+	
