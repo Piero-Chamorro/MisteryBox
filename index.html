@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang ="es">
+<html lang="es" id="r">
 <head>
 	<meta charset ="UTF-8">
 	<meta name ="viewport" content ="width =device-width, initial-scale =1.0">
@@ -13,8 +13,27 @@
 	<link rel="stylesheet" href ="css/main.css">
 	<link rel="stylesheet" href ="css/responsive.css">
 </head>
+<!-- <body class=hidden> -->
 <body>
-    <header>
+	
+	<!-- FIXME: Encontrar la manera de que el loader funcione con animaciones-->
+	<!-- <div class="preloader" id="onload">
+		<div class="loader">
+			<span style="--i:0;"></span>
+			<span style="--i:1;"></span>
+			<span style="--i:2;"></span>
+			<span style="--i:3;"></span>
+			<span style="--i:4;"></span>
+			<span style="--i:5;"></span>
+			<span style="--i:6;"></span>
+			<span style="--i:7;"></span>
+			<span style="--i:8;"></span>
+			<span style="--i:9;"></span>
+		</div>
+	</div> -->
+
+    <!-- <header class="relative"> -->
+	<header>
 		<div class="container">
 			<nav class="nav">
 				<div class="menu-toggle">
@@ -24,7 +43,7 @@
 				<a href ="index.html" class="logo"><img src="img/logo-prin.png"></a>
 				<ul class="nav-list">
 					<li class="nav-item">
-						<a href="#home" onclick ="toggle()" class="nav-link active">Inicio</a>
+						<a href="#home" onclick="toggleMenu()" class="nav-link active">Inicio</a>
 					</li>
 					<li class="nav-item">
 						<a href ="#information" class="nav-link">Información</a>
@@ -286,7 +305,7 @@
 			<div class ="img-box">
 				<div class="swiper-container">
 					<div class="swiper-wrapper">
-						<div class="swiper-slide"><img src="img/cocacola1.png"></div>
+						<div class="swiper-slide"><img src="img/pokemon-carta.jpg"></div>
 						<div class="swiper-slide"><img src="img/cocacola2.png"></div>
 						<div class="swiper-slide"><img src="img/cocacola3.png"></div>
 						<div class="swiper-slide"><img src="img/cocacola4.png"></div>
@@ -360,12 +379,12 @@
 
 	<!--Sección de Probabilidades-->
 	<!-- Presentacion probabilidades -->
-	<section class="perfect-blend between" id="probability">
+	<section class="porcent-pre between" id="probability">
         <div class="container">
             <div class="global-headline">
                 <div class="animate-top">
                     <h2 class="sub-headline">
-                        <span class="first-letter">C</span>alculando
+                        <span class="first-letter">C</span>onsultando
                     </h2>
                 </div>
                 <div class="animate-bottom">
@@ -393,13 +412,13 @@
 						aut consequatur mollitia sequi esse amet obcaecati quae magni error illo enim eum nobis 
 						delectus expedita nam aliquam?
                     </p>
-                    <a href="#soda" class="btn body-btn">Consulta tus chances de ganar</a>
+                    <a href="#por-soda" class="btn body-btn">Consultar probabilidades</a>
 				</div>  
 				<div class="image-group padding-right animate left">
-                    <a href="#soda"><img src="img/miniatura-soda.jpg"></a>
-                    <a href="#game"><img src="img/miniatura-juego.jpg"></a>
-                    <a href="#game"><img src="img/miniatura-anime.jpg"></a>
-                    <a href="#game"><img src="img/miniatura-navideña.jpg"></a>
+                    <a href="#prob-soda"><img src="img/prob-soda.png"></a>
+                    <a href="#prob-game"><img src="img/prob-game.jpg"></a>
+                    <a href="#prob-anime"><img src="img/prob-anime.jpg"></a>
+                    <a href="#prob-navidad"><img src="img/prob-navideña.jpg"></a>
                 </div>                  
             </div>
         </div>
@@ -407,7 +426,7 @@
 	<!--Fin de inicio porcentual-->
 
 	<!-- Probabilidades de soda -->
-	<section class="por-soda">
+	<section class="por-soda" id="por-soda">
 		<div class="container" id="blur">
 			<div class="content">
 				<img src="img/sodamisterio.jpg">
@@ -428,7 +447,7 @@
 	<!-- Fin de % soda -->
 
 	<!-- Probabilidades de juego -->
-	<section class="probability" id="probability">
+	<section class="prob-game" id="prob-game">
 		<div class="container" id="blur">
 			<div class="content">
 				<img src="img/sodamisterio.jpg">
@@ -449,11 +468,14 @@
 	<!-- Fin de % juego -->
 
 	<!-- Probabilidades de anime -->
-	<section class="probability" id="probability">
-		<div class="container" id="blur">
-			<div class="content">
+	<section class="prob-anime" id="prob-anime">
+		<div class="contenedor" id="blur">
+			<div class="contenido">
+				<h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, aspernatur asperiores? 
+					Voluptates ipsam dolorum, recusandae neque doloribus asperiores sint a esse omnis temporibus 
+					itaque veniam quibusdam exercitationem beatae mollitia debitis.</h2>
 				<img src="img/sodamisterio.jpg">
-				<a href="#probability" onclick ="toggle()">Ver porcentajes.</a>
+				<a href="#prob-anime" onclick="toggle()">Ver porcentajes.</a>
 			</div>
 		</div>
 		<div id="popup">
@@ -464,7 +486,7 @@
 				Nesciunt, earum maxime! Consequatur atque ut repudiandae, asperiores magnam cum minus excepturi, alias. 
 				Ab dolorum atque ipsam aspernatur architecto quas obcaecati reiciendis.
 			</p>
-			<a href ="#probability" onclick ="toggle()">Cerrar</a>
+			<a href="#prob-anime" onclick="toggle()">Cerrar</a>
 		</div>
 	</section>
 	<!-- Fin de % anime -->
@@ -665,15 +687,13 @@
 		</div>
 	</footer>
     <div class ="content-copy">
-		<div class ="copyright animate-bottom">
-			&copy;Todos los derechos reservados. 2020. | <a href ="#">P&M</a>
+		<div class ="copyright animate-top">
+			&copy;Todos los derechos reservados. 2020. | <a href="index.html">P&M</a>
 		</div>
 	</div>
 
-
 	<!-- main.js -->
 	<script src="main.js"></script>
-
 	<!-- scripts de movimiento img-box -->
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<script>

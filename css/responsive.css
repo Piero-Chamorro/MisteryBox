@@ -91,6 +91,15 @@
 }
 
 /* Animaciones */
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(90deg);
+    }
+} 
+
 @keyframes fadeUp{
     0%{
     transform : translateY(4rem);

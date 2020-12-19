@@ -1,3 +1,10 @@
+//loader
+window.onload = function(){
+    $('#onload').fadeOut();
+    $('body').removeClass('hidden');
+    $('header').removeClass('relative');
+}
+
 //Select element function
 const selectElement = function(element){
     return document.querySelector(element);
@@ -42,6 +49,8 @@ sr.reveal('.animate-bottom', {
 
 
 
+
+
 // function toggleMenu(){
 //     const menuToggle  = document.querySelector('.toggle');
 //     const navigation  = document.querySelector('.navigation')
@@ -56,4 +65,5 @@ function toggle(){
 	var popup = document.getElementById('popup');
 	popup.classList.toggle('active');
 }
-	
+    
+

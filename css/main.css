@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:100,200,300,400,500,600,700,800,900");
 @import url("https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Cabin|Herr+Von+Muellerhoff|Source+Sans+Pro:400,900&display=swap");
 *,
@@ -72,8 +72,7 @@ header {
   top: 50%;
   transform: translateY(-50%);
   right: 2.5rem;
-  cursor: pointer;
-  z-index: 1500; }
+  cursor: pointer; }
 
 .fa-times {
   display: none; }
@@ -152,7 +151,7 @@ header {
   letter-spacing: 2px;
   opacity: 0;
   animation: fadeUp .5s forwards;
-  animation-delay: .5s; }
+  animation-delay: 1s; }
 
 .first-letter {
   text-transform: uppercase;
@@ -243,7 +242,6 @@ header {
   color: #fff;
   background-color: var(--secondary-font-color); }
 
-/* discorver our story */
 .global-headline {
   text-align: center;
   margin-top: 3.9rem; }
@@ -315,27 +313,6 @@ header {
 .discover-box .box-description {
   padding-top: 3rem;
   margin-bottom: 0; }
-
-/* aa */
-.perfect-blend {
-  background: url("img/presentacion-porcentual.gif") center no-repeat;
-  background-size: cover; }
-
-.client-review {
-  background: url("img/presentacion-cliente-reviews.jpg") center no-repeat;
-  background-size: cover; }
-  .client-review .sub-headline {
-    color: #345d92;
-    font-weight: 600;
-    font-size: 11rem; }
-  .client-review .animate-bottom h1 {
-    -webkit-text-stroke: 2px #0A1526;
-    font-size: 2.5rem;
-    padding: 20px; }
-  .client-review .animate-bottom a {
-    -webkit-text-stroke: 1px #0A1526;
-    color: var(--secondary-font-color);
-    letter-spacing: 0; }
 
 section.soda {
   position: relative;
@@ -597,71 +574,77 @@ section.game {
 .swiper-container-3d .swiper-slide-shadow-right {
   background-image: none; }
 
-section.probability {
-  width: 100%; }
-  section.probability .container {
+.porcent-pre {
+  background: url("img/presentacion-porcentual.gif") center no-repeat;
+  background-size: cover; }
+
+.prob-anime {
+  font-family: 'Poppins', sans-serif; }
+  .prob-anime h2 {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333; }
+  .prob-anime a {
+    position: relative;
+    padding: 5px 20px;
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #fff;
+    background: #111; }
+  .prob-anime .contenedor {
     position: relative;
     width: 100%;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: #fff173;
     transition: 0.5s;
-    padding: 20px;
-    flex-direction: column; }
-    section.probability .container#blur.active {
+    padding: 20px; }
+    .prob-anime .contenedor#blur.active {
       filter: blur(20px);
       pointer-events: none;
       user-select: none; }
-    section.probability .container .content {
+    .prob-anime .contenedor .contenido {
       position: relative;
-      max-width: 800px;
-      flex-direction: column; }
-      section.probability .container .content h2 {
-        font-weight: 600;
-        margin-bottom: 10px;
-        color: #333; }
-      section.probability .container .content img {
+      max-width: 800px; }
+      .prob-anime .contenedor .contenido img {
         max-width: 100%;
         display: block; }
-      section.probability .container .content a {
-        position: relative;
-        padding: 5px 20px;
-        display: inline-block;
-        margin-top: 20px;
-        text-decoration: none;
-        color: #fff;
-        background: #111; }
-
-#popup {
-  position: fixed;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 600px;
-  padding: 50px;
-  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
-  background: #fff;
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.5s; }
-  #popup h2 {
-    font-weight: 600;
-    margin-bottom: 10px;
-    color: #333; }
-  #popup a {
-    position: relative;
-    padding: 5px 20px;
-    display: inline-block;
-    margin-top: 20px;
-    text-decoration: none;
-    color: #fff;
-    background: #111; }
-  #popup.active {
-    top: 50%;
-    visibility: visible;
-    opacity: 1;
+  .prob-anime #popup {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    padding: 50px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+    background: #fff;
+    visibility: hidden;
+    opacity: 0;
     transition: 0.5s; }
+    .prob-anime #popup.active {
+      top: 50%;
+      visibility: visible;
+      opacity: 1;
+      transition: 0.5s; }
+
+.client-review {
+  background: url("img/presentacion-cliente-reviews.jpg") center no-repeat;
+  background-size: cover; }
+  .client-review .sub-headline {
+    color: #345d92;
+    font-weight: 600;
+    font-size: 11rem; }
+  .client-review .animate-bottom h1 {
+    -webkit-text-stroke: 2px #0A1526;
+    font-size: 2.5rem;
+    padding: 20px; }
+  .client-review .animate-bottom a {
+    -webkit-text-stroke: 1px #0A1526;
+    color: var(--secondary-font-color);
+    letter-spacing: 0; }
 
 /*Reseñas*/
 .reviews {
@@ -896,7 +879,7 @@ footer {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  margin-left: 10.5rem; }
+  margin-left: 17.5rem; }
 
 .content-copy {
   width: 100%;

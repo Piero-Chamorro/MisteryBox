@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:100,200,300,400,500,600,700,800,900');
 @import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Cabin|Herr+Von+Muellerhoff|Source+Sans+Pro:400,900&display=swap');
 
@@ -44,6 +44,42 @@ html{
 body{
   overflow-x: hidden;
 }
+// .hidden{
+//   overflow: hidden;
+// }
+
+// TODO:Arreglar el loader para que funcione bien con las animaciones
+//loader
+// .preloader{
+//   min-height: 100vh;
+//   background: #000;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .loader{
+//   position: relative;
+//   width: 250px;
+//   height: 250px;
+//   border-radius: 50%;
+//   overflow: hidden;
+//   transform: rotate(175deg);
+//         span{
+//           position: absolute;
+//           top: calc( 12px * var(--i));
+//           left: calc( 12px * var(--i));
+//           right: calc( 12px * var(--i));
+//           bottom: calc( 12px * var(--i));
+//           border: 10px solid #0b0b0b;
+//           border-top: 10px solid #0f0;
+//           border-left: 10px solid #0f0;
+//           border-radius: 50%;
+//           animation: animate 1s alternate ease-in-out infinite;
+//           filter: hue-rotate(calc(60deg * var(--i)));
+//           animation-delay: calc(-0.1s * var(--i));
+//         }
+// }
 
 section{
   padding: 3.9rem 0;
@@ -85,6 +121,10 @@ header{
   background: linear-gradient(to bottom, rgba(0,0,0,.5), transparent);
 }
 
+// .relative{
+//   position: relative;
+// }
+
 .nav{
   height: 7.2rem;
   display: flex;
@@ -100,7 +140,6 @@ header{
   transform: translateY(-50%);
   right: 2.5rem;
   cursor: pointer;
-  z-index: 1500;
 }
 
 .fa-times{
@@ -191,7 +230,7 @@ header{
   letter-spacing: 2px;
   opacity: 0;
   animation: fadeUp .5s forwards;
-  animation-delay: .5s;
+  animation-delay: 1s;
 }
 
 .first-letter{
@@ -296,7 +335,6 @@ header{
   background-color: var(--secondary-font-color);
 }
 
-/* discorver our story */
 .global-headline{
   text-align: center;
   margin-top: 3.9rem;
@@ -362,7 +400,7 @@ header{
   background-color: var(--main-font-color-dark);
 }
 
-// Mistery-presentacion
+// Presentacion de la seccion cajas misterirosas
 .mistery{
   background: url("img/presentacion-cajas.jpg") center no-repeat;
   background-size: cover;
@@ -383,36 +421,6 @@ header{
 .discover-box .box-description{
   padding-top: 3rem;
   margin-bottom: 0;
-}
-
-/* aa */
-.perfect-blend{
-  background: url("img/presentacion-porcentual.gif") center no-repeat;
-  background-size: cover;
-}
-
-// Presentacion de cliente-review
-.client-review{
-  background: url("img/presentacion-cliente-reviews.jpg") center no-repeat;
-  background-size: cover;
-        .sub-headline{
-          color: #345d92;
-          font-weight: 600;
-          font-size: 11rem;
-        }
-        .animate-bottom{
-          h1{
-            -webkit-text-stroke: 2px #0A1526;
-            font-size: 2.5rem;
-            padding: 20px;
-            
-          }
-          a{
-            -webkit-text-stroke: 1px #0A1526;
-            color: var(--secondary-font-color);
-            letter-spacing: 0;
-          }
-        }
 }
 
 // Seccion de gaseosas
@@ -733,88 +741,121 @@ section.game {
 } 
 
 
-// Seccion de probabilidades
-section.probability{
-  width:100%;
-        .container{
+// Presentacion de porcentajes
+.porcent-pre{
+  background: url("img/presentacion-porcentual.gif") center no-repeat;
+  background-size: cover;
+}
+
+// Probabilidades de la seccion anime
+.prob-anime{
+  font-family: 'Poppins', sans-serif;
+        h2{
+          font-weight: 600;
+          margin-bottom: 10px;
+          color: #333;
+        }
+        a{
+          position: relative;
+          padding: 5px 20px;
+          display: inline-block;
+          margin-bottom: 20px;
+          text-decoration: none;
+          color: #fff;
+          background: #111;
+        }  
+        .contenedor{
           position: relative;
           width: 100%;
-          min-height: $alturamin;
+          min-height: 100vh;
           display: flex;
           justify-content: center;
           align-items: center;
+          background: #fff173;
           transition: 0.5s;
           padding: 20px;
-          flex-direction:column;
                 &#blur.active{
                   filter: blur(20px);
                   pointer-events: none;
                   user-select: none;
                 }
-                .content{
+                .contenido{
                   position: relative;
-                  max-width: $maxwidth - 300;
-                  flex-direction:column;
-                        h2{
-                          font-weight:600;
-                          margin-bottom:10px;
-                          color:#333;                  
-                        }
+                  max-width: 800px;
                         img{
-                          max-width:100%;
-                          display:block;
-                        }
-                        a{
-                          position:relative;
-                          padding:5px 20px;
-                          display:inline-block;
-                          margin-top:20px;
-                          text-decoration:none;
-                          color:$white;
-                          background:#111;
+                          max-width: 100%;
+                          display: block;
                         }
                 }
         }
+        #popup{
+          position: fixed;
+          top: 40%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          width: 600px;
+          padding: 50px;
+          box-shadow:0 5px 30px rgba(0,0,0,.30);
+          background: $white;
+          visibility: hidden;
+          opacity: 0;
+          transition: 0.5s;
+                &.active{
+                  top:50%;
+                  visibility: visible;
+                  opacity:1;
+                  transition: 0.5s; 
+                }
+        }      
 }
+// Fin % anime
+
+
+// #popup{
+//   position: fixed;
+//   top: 40%;
+//   left: 50%;
+//   transform: translate(-50%,-50%);
+//   width: 600px;
+//   padding: 50px;
+//   box-shadow:0 5px 30px rgba(0,0,0,.30);
+//   background: $white;
+//   visibility: hidden;
+//   opacity: 0;
+//   transition: 0.5s;
+//         &.active{
+//           top:50%;
+//           visibility: visible;
+//           opacity:1;
+//           transition: 0.5s; 
+//         }
+// }
 
 
 
-#popup{
-  position: fixed;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  width: 600px;
-  padding: 50px;
-  box-shadow:0 5px 30px rgba(0,0,0,.30);
-  background: $white;
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.5s;
-        h2{
-          font-weight:600;
-          margin-bottom:10px;
-          color:#333;
+// Presentacion de seccion clientes-review
+.client-review{
+  background: url("img/presentacion-cliente-reviews.jpg") center no-repeat;
+  background-size: cover;
+        .sub-headline{
+          color: #345d92;
+          font-weight: 600;
+          font-size: 11rem;
         }
-        a{
-          position:relative;
-          padding:5px 20px;
-          display:inline-block;
-          margin-top:20px;
-          text-decoration:none;
-          color:$white;
-          background:#111;
-        }
-        &.active{
-          top:50%;
-          visibility: visible;
-          opacity:1;
-          transition: 0.5s; 
+        .animate-bottom{
+          h1{
+            -webkit-text-stroke: 2px #0A1526;
+            font-size: 2.5rem;
+            padding: 20px;
+            
+          }
+          a{
+            -webkit-text-stroke: 1px #0A1526;
+            color: var(--secondary-font-color);
+            letter-spacing: 0;
+          }
         }
 }
-
-
-
 
 /*Reseñas*/
 .reviews{
@@ -1078,7 +1119,7 @@ footer{
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  margin-left: 10.5rem;
+  margin-left: 17.5rem;
 }
 
 .content-copy{
