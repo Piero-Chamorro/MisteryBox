@@ -43,7 +43,7 @@
 				<a href ="index.html" class="logo"><img src="img/logo-prin.png"></a>
 				<ul class="nav-list">
 					<li class="nav-item">
-						<a href="#home" onclick="toggleMenu()" class="nav-link active">Inicio</a>
+						<a href="#home" class="nav-link active">Inicio</a>
 					</li>
 					<li class="nav-item">
 						<a href ="#information" class="nav-link">Información</a>
@@ -144,8 +144,8 @@
                 <div class="image-group padding-right animate left">
                     <a href="#soda"><img src="img/miniatura-soda.jpg"></a>
                     <a href="#game"><img src="img/miniatura-juego.jpg"></a>
-                    <a href="#game"><img src="img/miniatura-anime.jpg"></a>
-                    <a href="#game"><img src="img/miniatura-navideña.jpg"></a>
+                    <a href="#anime"><img src="img/miniatura-anime.jpg"></a>
+                    <a href="#navidad"><img src="img/miniatura-navideña.jpg"></a>
                 </div>
                 <div class="box-description animate-right">
                     <div class="global-headline">
@@ -170,7 +170,7 @@
 	<!-- Seccion de Gaseosas -->
 	<section class="soda" id="soda">
 		<div class="circle"></div>
-		<div class="logosoda">
+		<div class="logo-boxes">
 			<img src="img/logo.png">
 		</div>				
 		<div class="content">
@@ -221,7 +221,7 @@
 	<!-- Seccion de juegos -->
 	<section class="game" id="game">
 		<div class="circle"></div>
-		<div class="logosoda">
+		<div class="logo-boxes">
 			<img src="img/logo-game.png">
 		</div>				
 		<div class="content">			
@@ -272,10 +272,10 @@
 	<!-- Fin de seccion de juegos -->
 
 	<!-- Seccion de Anime -->
-	<section class="soda" id="soda">
+	<section class="anime" id="anime">
 		<div class="circle"></div>
-		<div class="logosoda">
-			<img src="img/logo.png">
+		<div class="logo-boxes">
+			<img src="img/logo-anime.png">
 		</div>				
 		<div class="content">
 			<div class ="txt-box">
@@ -306,15 +306,9 @@
 				<div class="swiper-container">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide"><img src="img/pokemon-carta.jpg"></div>
-						<div class="swiper-slide"><img src="img/cocacola2.png"></div>
-						<div class="swiper-slide"><img src="img/cocacola3.png"></div>
-						<div class="swiper-slide"><img src="img/cocacola4.png"></div>
-						<div class="swiper-slide"><img src="img/cocacola5.png"></div>
-						<div class="swiper-slide"><img src="img/cocacola6.png"></div>
-						<div class="swiper-slide"><img src="img/cocacola7.png"></div>
-						<div class="swiper-slide"><img src="img/cocacola8.png"></div>
-						<div class="swiper-slide"><img src="img/cocacola9.png"></div>
-						<div class="swiper-slide"><img src="img/cocacola10.png"></div>					
+						<div class="swiper-slide"><img src="img/pokemon-carta.jpg"></div>
+						<div class="swiper-slide"><img src="img/pokemon-carta.jpg"></div>
+						<div class="swiper-slide"><img src="img/pokemon-carta.jpg"></div>				
 					</div> 
 				</div>		
 			</div>
@@ -323,30 +317,18 @@
 	<!-- Fin de seccion anime -->
 
 	<!-- Seccion de navidad -->
-	<section class="game" id="game">
+	<section class="navidad" id="navidad">
 		<div class="circle"></div>
-		<div class="logosoda">
+		<div class="logo-boxes">
 			<img src="img/logo-game.png">
 		</div>				
 		<div class="content">			
 			<div class="img-box">
 				<div class="swiper-container">
 					<div class="swiper-wrapper">
-						<div class="swiper-slide"><img src="img/playstation-5.png"></div>
-						<div class="swiper-slide"><img src="img/nintendo-switch.png"></div>
-						<div class="swiper-slide"><img src="img/xbox-serie-x.png"></div>
-						<div class="swiper-slide"><img src="img/nintendo-switch-lite.png"></div>
-						<div class="swiper-slide"><img src="img/control-dualsense-playstation5.png"></div>
-						<div class="swiper-slide"><img src="img/dualsense-charging-station.png"></div>
-						<div class="swiper-slide"><img src="img/ps5-wireless-headset.png"></div>
-						<div class="swiper-slide"><img src="img/spiderman-miles-morales-ultimate-edition.png"></div>
-						<div class="swiper-slide"><img src="img/spider-man-miles-morales.png"></div>
-						<div class="swiper-slide"><img src="img/juego3.png"></div>
-						<div class="swiper-slide"><img src="img/juego4.png"></div>
-						<div class="swiper-slide"><img src="img/assassins-creed-valhalla.png"></div>
-						<div class="swiper-slide"><img src="img/nba-forever-edition.png"></div>
-						<div class="swiper-slide"><img src="img/ps5-camera.png"></div>
-						<div class="swiper-slide"><img src="img/media-remote-ps5.png"></div>
+						<div class="swiper-slide"><img src="img/arbol-navidad.png"></div>
+						<div class="swiper-slide"><img src="img/disfraz-santa.png"></div>
+						<div class="swiper-slide"><img src="img/arbol-navidad.png"></div>
 					</div> 
 				</div>		
 			</div>
@@ -412,7 +394,8 @@
 						aut consequatur mollitia sequi esse amet obcaecati quae magni error illo enim eum nobis 
 						delectus expedita nam aliquam?
                     </p>
-                    <a href="#por-soda" class="btn body-btn">Consultar probabilidades</a>
+					<a href="#prob-soda" class="btn body-btn">Consultar probabilidades</a>
+					<div class="spc"></div>
 				</div>  
 				<div class="image-group padding-right animate left">
                     <a href="#prob-soda"><img src="img/prob-soda.png"></a>
@@ -426,14 +409,15 @@
 	<!--Fin de inicio porcentual-->
 
 	<!-- Probabilidades de soda -->
-	<section class="por-soda" id="por-soda">
-		<div class="container" id="blur">
-			<div class="content">
+	<section class="prob-soda" id="prob-soda">
+		<div class="container-soda" id="blur-soda">
+			<div class="content-soda">
+				<h2>Hola</h2>
 				<img src="img/sodamisterio.jpg">
-				<a href="#probability" onclick ="toggle()">Ver porcentajes.</a>
+				<a href="#prob-soda" onclick="toggle_soda()">Ver porcentajes</a>
 			</div>
 		</div>
-		<div id="popup">
+		<div id="popup-soda">
 			<h2>
 				Lorem ipsum dolor sit, amet consectetur adipisicing elit.
 			</h2>
@@ -441,20 +425,21 @@
 				Nesciunt, earum maxime! Consequatur atque ut repudiandae, asperiores magnam cum minus excepturi, alias. 
 				Ab dolorum atque ipsam aspernatur architecto quas obcaecati reiciendis.
 			</p>
-			<a href ="#probability" onclick ="toggle()">Cerrar</a>
+			<a href="#prob-soda" onclick="toggle_soda()">Cerrar</a>
 		</div>
 	</section>
 	<!-- Fin de % soda -->
 
 	<!-- Probabilidades de juego -->
 	<section class="prob-game" id="prob-game">
-		<div class="container" id="blur">
-			<div class="content">
-				<img src="img/sodamisterio.jpg">
-				<a href="#probability" onclick ="toggle()">Ver porcentajes.</a>
+		<div class="container-game" id="blur-game">
+			<div class="content-game">
+				<h2>Hola</h2>
+				<img src="img/gamemisterio.jpg">
+				<a href="#prob-game" onclick="toggle_game()">Ver porcentajes.</a>
 			</div>
 		</div>
-		<div id="popup">
+		<div id="popup-game">
 			<h2>
 				Lorem ipsum dolor sit, amet consectetur adipisicing elit.
 			</h2>
@@ -462,23 +447,21 @@
 				Nesciunt, earum maxime! Consequatur atque ut repudiandae, asperiores magnam cum minus excepturi, alias. 
 				Ab dolorum atque ipsam aspernatur architecto quas obcaecati reiciendis.
 			</p>
-			<a href ="#probability" onclick ="toggle()">Cerrar</a>
+			<a href="#prob-game" onclick="toggle_game()">Cerrar</a>
 		</div>
 	</section>
 	<!-- Fin de % juego -->
 
 	<!-- Probabilidades de anime -->
 	<section class="prob-anime" id="prob-anime">
-		<div class="contenedor" id="blur">
-			<div class="contenido">
-				<h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, aspernatur asperiores? 
-					Voluptates ipsam dolorum, recusandae neque doloribus asperiores sint a esse omnis temporibus 
-					itaque veniam quibusdam exercitationem beatae mollitia debitis.</h2>
-				<img src="img/sodamisterio.jpg">
-				<a href="#prob-anime" onclick="toggle()">Ver porcentajes.</a>
+		<div class="container-anime" id="blur-anime">
+			<div class="content-anime">
+				<h2>Anime</h2>
+				<img src="img/animemisterio.jpg">
+				<a href="#prob-anime" onclick="toggle_anime()">Ver porcentajes.</a>
 			</div>
 		</div>
-		<div id="popup">
+		<div id="popup-anime">
 			<h2>
 				Lorem ipsum dolor sit, amet consectetur adipisicing elit.
 			</h2>
@@ -486,20 +469,21 @@
 				Nesciunt, earum maxime! Consequatur atque ut repudiandae, asperiores magnam cum minus excepturi, alias. 
 				Ab dolorum atque ipsam aspernatur architecto quas obcaecati reiciendis.
 			</p>
-			<a href="#prob-anime" onclick="toggle()">Cerrar</a>
+			<a href="#prob-anime" onclick="toggle_anime()">Cerrar</a>
 		</div>
 	</section>
 	<!-- Fin de % anime -->
 
 	<!-- Probabilidades de navideña -->
-	<section class="probability" id="probability">
-		<div class="container" id="blur">
-			<div class="content">
-				<img src="img/sodamisterio.jpg">
-				<a href="#probability" onclick ="toggle()">Ver porcentajes.</a>
+	<section class="prob-navidad" id="prob-navidad">
+		<div class="container-navidad" id="blur-navidad">
+			<div class="content-navidad">
+				<h2>Navidad</h2>
+				<img src="img/navidadmisterio.jpg">
+				<a href="#prob-navidad" onclick="toggle_navidad()">Ver porcentajes.</a>
 			</div>
 		</div>
-		<div id="popup">
+		<div id="popup-navidad">
 			<h2>
 				Lorem ipsum dolor sit, amet consectetur adipisicing elit.
 			</h2>
@@ -507,11 +491,12 @@
 				Nesciunt, earum maxime! Consequatur atque ut repudiandae, asperiores magnam cum minus excepturi, alias. 
 				Ab dolorum atque ipsam aspernatur architecto quas obcaecati reiciendis.
 			</p>
-			<a href ="#probability" onclick ="toggle()">Cerrar</a>
+			<a href="#prob-navidad" onclick="toggle_navidad()">Cerrar</a>
 		</div>
 	</section>
 	<!-- Fin de % navideña -->
 	<!-- Fin de seccion de probabilidades -->
+
 
 	<!--Sección de Reseñas-->
 	<!-- Inicio reseñas -->
@@ -605,6 +590,23 @@
 				</div>
 		</section>
 
+	<!-- Presentación de Atencion al Cliente -->
+	<section class="mistery between" id="mistery">
+        <div class="container">
+            <div class="global-headline">
+                <div class="animate-top">
+                    <h2 class="sub-headline">
+                        <span class="first-letter">C</span>ontacta
+                    </h2>
+                </div>
+                <div class="animate-bottom">
+                    <h1 class="headline">Con nosotros</h1>  
+                </div>               
+            </div>
+        </div>
+	</section>
+	<!-- Fin de presentacion -->
+
 	<!--Sección de Atención al Cliente-->
 	<section class ="help animate-top" id ="help">
 		<form action ="">
@@ -627,10 +629,10 @@
 					<label>Asunto</label>
 				</div>
 				<div class ="group"> 
-					<textarea name ="" id ="" rows ="3" required></textarea><span class ="bar"></span>
+					<textarea name="" id="" rows="3" required></textarea><span class ="bar"></span>
 					<label>Mensaje</label>
 				</div>
-				<button type ="submit">Contactar</button>
+				<button type="submit">Contactar</button>
 			</div>
 		</form>
 	</section>
@@ -676,7 +678,7 @@
 					<div class="newsletter-container">
 						<h4>Suscribete</h4>
 						<form action="" class="newsletter-form">
-							<input type="text" class="newsletter-input" placeholder="Your email address...">
+							<input type="text" class="newsletter-input" placeholder="Ingresa tu correo aqui">
 							<button class="newsletter-btn" type="submit">
 								<i class="fas fa-envelope"></i>
 							</button>

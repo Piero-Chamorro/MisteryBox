@@ -47,23 +47,28 @@ sr.reveal('.animate-bottom', {
     delay: 600
 });
 
-
-
-
-
-// function toggleMenu(){
-//     const menuToggle  = document.querySelector('.toggle');
-//     const navigation  = document.querySelector('.navigation')
-//     menuToggle.classList.toggle('active')
-//     navigation.classList.toggle('active')
-// }
-
 // Para porcentajes
-function toggle(){
-    var blur = document.getElementById('blur');
+function toggle_soda(){
+    var blur = document.getElementById('blur-soda');
 	blur.classList.toggle('active');	
-	var popup = document.getElementById('popup');
-	popup.classList.toggle('active');
+	var popup = document.getElementById('popup-soda');
+    popup.classList.toggle('active');
 }
-    
-
+function toggle_game(){
+    var blur = document.getElementById('blur-game');
+	blur.classList.toggle('active');	
+	var popup = document.getElementById('popup-game');
+    popup.classList.toggle('active');
+}
+function toggle_anime(){
+    var blur = document.getElementById('blur-anime');
+	blur.classList.toggle('active');	
+	var popup = document.getElementById('popup-anime');
+    popup.classList.toggle('active');
+}
+function toggle_navidad(){
+    var blur = document.getElementById('blur-navidad');
+	blur.classList.toggle('active');	
+	var popup = document.getElementById('popup-navidad');
+    popup.classList.toggle('active');
+}

@@ -83,7 +83,7 @@
         opacity: 1;
     }
     .newsletter-btn{
-        margin-left: 14.5rem;
+        margin-left: 13.5rem;
     }
     .content-copy{
         padding: 8px 100px;
@@ -102,7 +102,7 @@
 
 @keyframes fadeUp{
     0%{
-    transform : translateY(4rem);
+        transform : translateY(4rem);
     }
     100%{
         opacity: 1;
@@ -157,6 +157,7 @@
         transform: translateY(-1rem);
     }
 }
+
 
 /* Solo para las secciones cajas(soda,game,etc) */
 @media (max-width: 991px) {
