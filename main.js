@@ -1,9 +1,3 @@
-//loader
-window.onload = function(){
-    $('#onload').fadeOut();
-    $('body').removeClass('hidden');
-    $('header').removeClass('relative');
-}
 
 //Select element function
 const selectElement = function(element){
@@ -50,25 +44,25 @@ sr.reveal('.animate-bottom', {
 // Para porcentajes
 function toggle_soda(){
     var blur = document.getElementById('blur-soda');
-	blur.classList.toggle('active');	
+	blur.classList.toggle('active');
 	var popup = document.getElementById('popup-soda');
     popup.classList.toggle('active');
 }
 function toggle_game(){
     var blur = document.getElementById('blur-game');
-	blur.classList.toggle('active');	
+	blur.classList.toggle('active');
 	var popup = document.getElementById('popup-game');
     popup.classList.toggle('active');
 }
 function toggle_anime(){
     var blur = document.getElementById('blur-anime');
-	blur.classList.toggle('active');	
+	blur.classList.toggle('active');
 	var popup = document.getElementById('popup-anime');
     popup.classList.toggle('active');
 }
 function toggle_navidad(){
     var blur = document.getElementById('blur-navidad');
-	blur.classList.toggle('active');	
+    blur.classList.toggle('active');
 	var popup = document.getElementById('popup-navidad');
     popup.classList.toggle('active');
 }

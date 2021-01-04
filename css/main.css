@@ -17,14 +17,13 @@
   --secondary-font-color: #c59d5f;
   --body-font-color: #515151; }
 
-/* fallback for old browsers */
-/* Chrome 10-25, Safari 5.1-6 */
 html {
   font-family: var(--body-font);
   font-size: 11px;
   color: #031321;
   scroll-behavior: smooth;
-  background: linear-gradient(to bottom, #FFFFFF, #FFEFBA); }
+  background: linear-gradient(to bottom, #FFFFFF, #FFEFBA);
+  display: block; }
 
 body {
   overflow-x: hidden; }
@@ -370,14 +369,14 @@ section.soda {
         display: inline-block;
         margin-top: 30px;
         padding: 15px 30px;
-        color: #e51e2a;
         text-transform: uppercase;
         font-weight: 500;
         letter-spacing: 4px;
         text-decoration: none;
         font-size: 24px;
         overflow: hidden;
-        transition: 0.2s; }
+        transition: 0.2s;
+        color: #e51e2a; }
         section.soda .content .txt-box a:hover {
           color: #05110e7a;
           background: #e51e2a;
@@ -657,27 +656,25 @@ section.anime {
           bottom: 100%;
           transition: 1s;
           transition-delay: 0.75s; }
-  section.anime .swiper-container {
-    width: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px; }
-    section.anime .swiper-container .swiper-slide {
-      background-position: center;
-      background-size: cover;
-      width: 180px;
-      height: 460px;
-      display: flex;
-      justify-content: center; }
-  section.anime .content .img-box {
+  section.anime .img-box {
     width: 500px;
     display: flex;
     justify-content: flex-end; }
-    section.anime .content .img-box img {
-      max-width: 150px; }
-  section.anime .swiper-slide img {
-    position: absolute;
-    bottom: 0;
-    max-height: 100%; }
+    section.anime .img-box .swiper-container {
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px; }
+      section.anime .img-box .swiper-container .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 300px;
+        height: 500px;
+        display: flex;
+        justify-content: center; }
+        section.anime .img-box .swiper-container .swiper-slide img {
+          position: absolute;
+          bottom: 0;
+          max-height: 100%; }
 
 section.navidad {
   position: relative;
@@ -807,7 +804,7 @@ section.navidad {
   .prob-soda .container-soda {
     position: relative;
     width: 100%;
-    min-height: 0vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -841,7 +838,7 @@ section.navidad {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 600px;
+    width: 100%;
     padding: 50px;
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
     background: #fff;
@@ -859,7 +856,7 @@ section.navidad {
   .prob-game .container-game {
     position: relative;
     width: 100%;
-    min-height: 0vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -887,16 +884,18 @@ section.navidad {
     margin-top: 20px;
     text-decoration: none;
     color: #fff;
-    background: #111; }
+    background: #111;
+    display: flex;
+    justify-content: center; }
   .prob-game #popup-game {
     position: fixed;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 600px;
+    width: 100%;
     padding: 50px;
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
-    background: #fff;
+    background: #252627;
     visibility: hidden;
     opacity: 0;
     transition: 0.5s; }
@@ -911,7 +910,7 @@ section.navidad {
   .prob-anime .container-anime {
     position: relative;
     width: 100%;
-    min-height: 0vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -963,7 +962,7 @@ section.navidad {
   .prob-navidad .container-navidad {
     position: relative;
     width: 100%;
-    min-height: 0vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1010,22 +1009,95 @@ section.navidad {
       opacity: 1;
       transition: 0.5s; }
 
+.clientes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  transform-style: preserve-3d;
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif; }
+  .clientes .card-cli {
+    position: relative;
+    width: 335px;
+    height: 500px;
+    margin: 20px;
+    transform-style: preserve-3d;
+    perspective: 1000px; }
+    .clientes .card-cli .box-cli {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: 1s ease; }
+      .clientes .card-cli .box-cli .img-cli {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; }
+        .clientes .card-cli .box-cli .img-cli img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover; }
+      .clientes .card-cli .box-cli .content-cli {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #333;
+        backface-visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform-style: preserve-3d;
+        transform: rotateY(180deg); }
+        .clientes .card-cli .box-cli .content-cli div {
+          transform-style: preserve-3d;
+          padding: 20px;
+          background: #f09433;
+          background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+          background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+          background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+          transform: translateZ(100px); }
+          .clientes .card-cli .box-cli .content-cli div h2 {
+            color: #fff;
+            font-size: 20px;
+            letter-spacing: 1px; }
+          .clientes .card-cli .box-cli .content-cli div p {
+            color: #fff;
+            font-size: 16px; }
+    .clientes .card-cli:hover .box-cli {
+      transform: rotateY(180deg); }
+
 .client-review {
   background: url("img/presentacion-cliente-reviews.jpg") center no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  width: 100%; }
   .client-review .sub-headline {
     color: var(--secondary-font-color);
     font-weight: 550;
-    font-size: 15rem;
-    letter-spacing: 9px; }
+    font-size: 10rem;
+    letter-spacing: 9px;
+    width: 100%; }
   .client-review .animate-bottom h1 {
     -webkit-text-stroke: 2px #0A1526;
     font-size: 2.5rem;
-    padding: 20px; }
+    padding: 20px;
+    width: 100%; }
   .client-review .animate-bottom a {
     -webkit-text-stroke: 1px #0A1526;
     color: var(--secondary-font-color);
-    letter-spacing: 0; }
+    letter-spacing: 0;
+    width: 100%; }
 
 /*Reseñas*/
 .reviews {
@@ -1037,7 +1109,7 @@ section.navidad {
   padding-top: 8%;
   /*.p{
         margin-left: 80px;
-        margin-right: 80px; 
+        margin-right: 80px;
         margin-bottom: 1em;
         font: 120% sans-serif;
         text-align: justify;
@@ -1070,7 +1142,7 @@ section.navidad {
       border: 1px solid #000;
       box-sizing: border-box;
       transform-origin: left;
-      z-index: 100000;
+      z-index: 1000;
       transition: 1s; }
     .reviews .card:hover .img-box {
       transform: rotateY(-135deg); }
@@ -1088,7 +1160,10 @@ section.navidad {
       box-sizing: border-box;
       padding: 20px; }
 
-/*Atención al Cliente*/
+.contact {
+  background: url("img/presentacion-fondo-contacto.jpg") center no-repeat;
+  background-size: cover; }
+
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -1221,22 +1296,37 @@ footer {
 .footer-content-about p {
   line-height: 2; }
 
-.social-icons {
-  list-style: none;
+.sci {
   margin-bottom: 5.4rem;
   display: flex;
   justify-content: center; }
-
-.social-icons i {
-  font-size: 2rem;
-  color: #fff;
-  padding: .8rem 2rem;
-  opacity: .5;
-  transition: color .5s; }
-
-.social-icons i:hover,
-.social-icons i:focus {
-  color: var(--secondary-font-color); }
+  .sci li {
+    list-style: none; }
+  .sci li a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 4px; }
+    .sci li a .fa {
+      color: #fff;
+      font-size: 20px; }
+  .sci li a:hover {
+    background: blue; }
+  .sci .fb li a:hover {
+    background: #3b5998; }
+  .sci .in li a:hover {
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+  .sci .tw li a:hover {
+    background: #55acee; }
+  .sci .yt li a:hover {
+    background: #bb0000; }
 
 .newsletter-form {
   width: 100%;
@@ -1274,3 +1364,13 @@ footer {
       text-decoration: none;
       color: #fff;
       font-weight: bold; }
+
+.table {
+  background-color: #252627;
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #fff;
+  display: table;
+  text-indent: initial;
+  border-spacing: 2px;
+  border-color: grey; }

@@ -22,10 +22,10 @@
 
 // variables
 $white:#fff;
-$alturamin: 100vh;  
-$fondo: #FFEFBA;  /* fallback for old browsers */
-$fondo: -webkit-linear-gradient(to bottom, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
-$fondo: linear-gradient(to bottom, #FFFFFF, #FFEFBA); 
+$alturamin: 100vh;
+$fondo: #FFEFBA;
+$fondo: -webkit-linear-gradient(to bottom, #FFFFFF, #FFEFBA);
+$fondo: linear-gradient(to bottom, #FFFFFF, #FFEFBA);
 $maxwidth:1100px;
 
 
@@ -36,48 +36,12 @@ html{
   color: #031321;
   scroll-behavior: smooth;
   background: $fondo;
+  display: block;
 }
 
 body{
   overflow-x: hidden;
 }
-
-// .hidden{
-//   overflow: hidden;
-// }
-
-// TODO:Arreglar el loader para que funcione bien con las animaciones
-//loader
-// .preloader{
-//   min-height: 100vh;
-//   background: #000;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }
-
-// .loader{
-//   position: relative;
-//   width: 250px;
-//   height: 250px;
-//   border-radius: 50%;
-//   overflow: hidden;
-//   transform: rotate(175deg);
-//         span{
-//           position: absolute;
-//           top: calc( 12px * var(--i));
-//           left: calc( 12px * var(--i));
-//           right: calc( 12px * var(--i));
-//           bottom: calc( 12px * var(--i));
-//           border: 10px solid #0b0b0b;
-//           border-top: 10px solid #0f0;
-//           border-left: 10px solid #0f0;
-//           border-radius: 50%;
-//           animation: animate 1s alternate ease-in-out infinite;
-//           filter: hue-rotate(calc(60deg * var(--i)));
-//           animation-delay: calc(-0.1s * var(--i));
-//         }
-// }
 
 section{
   padding: 3.9rem 0;
@@ -216,7 +180,7 @@ header{
   background: url("img/home.jpg") center no-repeat;//imagen principal
   background-size: cover;
   display: flex;
-  align-items: center; 
+  align-items: center;
   text-align: center;
 }
 
@@ -262,7 +226,7 @@ header{
   position: relative;
   opacity: 0;
   animation: grow 2s forwards;
-  animation-delay: .9s;  
+  animation-delay: .9s;
 }
 
 .line-right::before,
@@ -284,7 +248,7 @@ header{
 
 .line-left::before{
   border-left-color: $white;
-  left: 0;  
+  left: 0;
 }
 
 .asterisk{
@@ -368,7 +332,6 @@ header{
           line-height: 1.6;
           margin-bottom: 2.4rem;
         }
-    
 }
 
 .body-btn{
@@ -385,7 +348,7 @@ header{
           height: 2px;
           background-color: var(--secondary-font-color);
           transition: background-color .5s;
-        }  
+        }
 }
 
 .body-btn:hover,
@@ -477,14 +440,13 @@ section.soda {
                               font-weight:700;
                           }
                           p{
-                            color:$white; 
+                            color:$white;
                           }
                           a{
                             position: relative;
                             display: inline-block;
                             margin-top: 30px;
                             padding: 15px 30px;
-                            color: #e51e2a; 
                             text-transform: uppercase;
                             font-weight:500;
                             letter-spacing: 4px;
@@ -492,6 +454,7 @@ section.soda {
                             font-size: 24px;
                             overflow: hidden;
                             transition: 0.2s;
+                            color: #e51e2a;
                                   &:hover{
                                     color: #05110e7a;
                                     background: #e51e2a;
@@ -572,7 +535,7 @@ section.soda {
                     justify-content: flex-end;
                           img{
                             max-width:($maxwidth - 950);
-                          }      
+                          }
                   }
           }
           .swiper-slide img{
@@ -620,14 +583,14 @@ section.game {
                               font-weight:700;
                           }
                           p{
-                            color:$white; 
+                            color:$white;
                           }
                           a{
                               position: relative;
                               display: inline-block;
                               margin-top: 30px;
                               padding: 15px 30px;
-                              color: #2196f3; 
+                              color: #2196f3;
                               text-transform: uppercase;
                               font-weight:500;
                               letter-spacing: 4px;
@@ -711,7 +674,7 @@ section.game {
                                   justify-content:center;
                                         img{
                                           position: absolute;
-                                          bottom: 0;  
+                                          bottom: 0;
                                           max-height: 100%;
                                         }
                                 }
@@ -758,14 +721,14 @@ section.anime {
                               font-weight:700;
                           }
                           p{
-                            color:$white; 
+                            color:$white;
                           }
                           a{
                             position: relative;
                             display: inline-block;
                             margin-top: 30px;
                             padding: 15px 30px;
-                            color: #7353BA; 
+                            color: #7353BA;
                             text-transform: uppercase;
                             font-weight:500;
                             letter-spacing: 4px;
@@ -833,34 +796,29 @@ section.anime {
                           }
                 }
         }
-        .swiper-container{
-          width: 100%;
-          padding-top: 50px;
-          padding-bottom: 50px;
-                .swiper-slide {
-                  background-position: center;
-                  background-size: cover;
-                  width: 180px;
-                  height: 460px;
-                  display:flex;
-                  justify-content:center;
+        .img-box{
+          width: 500px;
+          display: flex;
+          justify-content: flex-end;
+                .swiper-container{
+                  width: 100%;
+                  padding-top: 50px;
+                  padding-bottom: 50px;
+                        .swiper-slide {
+                          background-position: center;
+                          background-size: cover;
+                          width: 300px;
+                          height: 500px;
+                          display:flex;
+                          justify-content:center;
+                                img{
+                                  position: absolute;
+                                  bottom: 0;
+                                  max-height: 100%;
+                                }
+                        }
                 }
-          }
-          .content{
-                  .img-box{
-                    width: 500px;
-                    display: flex;
-                    justify-content: flex-end;
-                          img{
-                            max-width:($maxwidth - 950);
-                          }      
-                  }
-          }
-          .swiper-slide img{
-            position:absolute;
-            bottom:0;
-            max-height:100%;
-          }
+        }
 }//Fin de seccion anime
 
 
@@ -901,14 +859,14 @@ section.navidad {
                               font-weight:700;
                           }
                           p{
-                            color:$white; 
+                            color:$white;
                           }
                           a{
                               position: relative;
                               display: inline-block;
                               margin-top: 30px;
                               padding: 15px 30px;
-                              color: #69995D; 
+                              color: #69995D;
                               text-transform: uppercase;
                               font-weight:500;
                               letter-spacing: 4px;
@@ -992,7 +950,7 @@ section.navidad {
                                   justify-content:center;
                                         img{
                                           position: absolute;
-                                          bottom: 0;  
+                                          bottom: 0;
                                           max-height: 100%;
                                         }
                                 }
@@ -1007,7 +965,7 @@ section.navidad {
   .swiper-slide-shadow-right{
     background-image:none;
   }
-} 
+}
 
 
 // Presentacion de porcentajes
@@ -1022,7 +980,7 @@ section.navidad {
         .container-soda{
           position: relative;
           width: 100%;
-          min-height: 0vh;
+          min-height: 100vh;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -1038,7 +996,7 @@ section.navidad {
                   max-width: 800px;
                   text-align: center;
                 }
-        }  
+        }
         h2{
           font-weight: 600;
           margin-bottom: 10px;
@@ -1056,13 +1014,13 @@ section.navidad {
           text-decoration: none;
           color: $white;
           background: #111;
-        } 
+        }
         #popup-soda{
           position: fixed;
           top: 40%;
           left: 50%;
           transform: translate(-50%,-50%);
-          width: 600px;
+          width: 100%;
           padding: 50px;
           box-shadow:0 5px 30px rgba(0,0,0,.30);
           background: $white;
@@ -1073,7 +1031,7 @@ section.navidad {
                   top: 50%;
                   visibility: visible;
                   opacity: 1;
-                  transition: 0.5s; 
+                  transition: 0.5s;
                 }
         }
 }
@@ -1085,7 +1043,7 @@ section.navidad {
         .container-game{
           position: relative;
           width: 100%;
-          min-height: 0vh;
+          min-height: 100vh;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -1101,7 +1059,7 @@ section.navidad {
                   max-width: 800px;
                   text-align: center;
                 }
-        }  
+        }
         h2{
           font-weight: 600;
           margin-bottom: 10px;
@@ -1119,16 +1077,18 @@ section.navidad {
           text-decoration: none;
           color: $white;
           background: #111;
-        } 
+          display: flex;
+          justify-content: center;
+        }
         #popup-game{
           position: fixed;
           top: 40%;
           left: 50%;
           transform: translate(-50%,-50%);
-          width: 600px;
+          width: 100%;
           padding: 50px;
           box-shadow:0 5px 30px rgba(0,0,0,.30);
-          background: $white;
+          background: #252627;
           visibility: hidden;
           opacity: 0;
           transition: 0.5s;
@@ -1136,7 +1096,7 @@ section.navidad {
                   top: 50%;
                   visibility: visible;
                   opacity: 1;
-                  transition: 0.5s; 
+                  transition: 0.5s;
                 }
         }
 }
@@ -1148,7 +1108,7 @@ section.navidad {
         .container-anime{
           position: relative;
           width: 100%;
-          min-height: 0vh;
+          min-height: 100vh;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -1164,7 +1124,7 @@ section.navidad {
                   max-width: 800px;
                   text-align: center;
                 }
-        }  
+        }
         h2{
           font-weight: 600;
           margin-bottom: 10px;
@@ -1182,7 +1142,7 @@ section.navidad {
           text-decoration: none;
           color: $white;
           background: #111;
-        } 
+        }
         #popup-anime{
           position: fixed;
           top: 40%;
@@ -1199,7 +1159,7 @@ section.navidad {
                   top: 50%;
                   visibility: visible;
                   opacity: 1;
-                  transition: 0.5s; 
+                  transition: 0.5s;
                 }
         }
 }
@@ -1211,7 +1171,7 @@ section.navidad {
         .container-navidad{
           position: relative;
           width: 100%;
-          min-height: 0vh;
+          min-height: 100vh;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -1227,7 +1187,7 @@ section.navidad {
                   max-width: 800px;
                   text-align: center;
                 }
-        }  
+        }
         h2{
           font-weight: 600;
           margin-bottom: 10px;
@@ -1245,7 +1205,7 @@ section.navidad {
           text-decoration: none;
           color: $white;
           background: #111;
-        } 
+        }
         #popup-navidad{
           position: fixed;
           top: 40%;
@@ -1262,11 +1222,89 @@ section.navidad {
                   top: 50%;
                   visibility: visible;
                   opacity: 1;
-                  transition: 0.5s; 
+                  transition: 0.5s;
                 }
         }
 }
 //Fin de seccion de probabilidades navidad
+
+.clientes{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  transform-style: preserve-3d;
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+        .card-cli{
+          position: relative;
+          width: 335px;
+          height: 500px;
+          margin: 20px;
+          transform-style: preserve-3d;
+          perspective: 1000px;
+                .box-cli{
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  transform-style: preserve-3d;
+                  transition: 1s ease;
+                        .img-cli{
+                          position: absolute;
+                          top: 0;
+                          left: 0;
+                          width: 100%;
+                          height: 100%;
+                                img{
+                                  position: absolute;
+                                  top: 0;
+                                  left: 0;
+                                  width: 100%;
+                                  height: 100%;
+                                  object-fit: cover;
+                                }
+                        }
+                        .content-cli{
+                          position: absolute;
+                          top: 0;
+                          left: 0;
+                          width: 100%;
+                          height: 100%;
+                          background: #333;
+                          backface-visibility: hidden;
+                          display: flex;
+                          justify-content: center;
+                          align-items: center;
+                          transform-style: preserve-3d;
+                          transform: rotateY(180deg);
+                                div{
+                                  transform-style: preserve-3d;
+                                  padding: 20px;
+                                  background: #f09433;
+                                  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+                                  background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+                                  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+                                  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );transform: translateZ(100px);
+                                        h2{
+                                          color: $white;
+                                          font-size: 20px;
+                                          letter-spacing: 1px;
+                                        }
+                                        p{
+                                          color: $white;
+                                          font-size: 16px ;
+                                        }
+                                }
+                        }
+                }
+                &:hover .box-cli{
+                  transform: rotateY(180deg);
+                }
+        }
+}
 
 
 
@@ -1274,24 +1312,27 @@ section.navidad {
 .client-review{
   background: url("img/presentacion-cliente-reviews.jpg") center no-repeat;
   background-size: cover;
+  width: 100%;
         .sub-headline{
           color: var(--secondary-font-color);
           font-weight: 550;
-          font-size: 15rem;
+          font-size: 10rem;
           letter-spacing: 9px;
+          width: 100%;
         }
         .animate-bottom{
-          h1{
-            -webkit-text-stroke: 2px #0A1526;
-            font-size: 2.5rem;
-            padding: 20px;
-            
-          }
-          a{
-            -webkit-text-stroke: 1px #0A1526;
-            color: var(--secondary-font-color);
-            letter-spacing: 0;
-          }
+              h1{
+                -webkit-text-stroke: 2px #0A1526;
+                font-size: 2.5rem;
+                padding: 20px;
+                width: 100%;
+              }
+              a{
+                -webkit-text-stroke: 1px #0A1526;
+                color: var(--secondary-font-color);
+                letter-spacing: 0;
+                width: 100%;
+              }
         }
 }
 
@@ -1305,7 +1346,7 @@ section.navidad {
   padding-top: 8%;
       /*.p{
         margin-left: 80px;
-        margin-right: 80px; 
+        margin-right: 80px;
         margin-bottom: 1em;
         font: 120% sans-serif;
         text-align: justify;
@@ -1313,7 +1354,7 @@ section.navidad {
       */
       a{
         margin-left: 80px;
-        margin-right: 80px;  
+        margin-right: 80px;
         font: 120% sans-serif;
         color: #031926;
         text-decoration:none;
@@ -1340,7 +1381,7 @@ section.navidad {
               border: 1px solid #000;
               box-sizing: border-box;
               transform-origin: left;
-              z-index: 100000;
+              z-index: 1000;
               transition: 1s;
             }
             &:hover .img-box{
@@ -1364,14 +1405,17 @@ section.navidad {
       }
 }
 
+// Presentacion de la seccion cajas misterirosas
+.contact{
+  background: url("img/presentacion-fondo-contacto.jpg") center no-repeat;
+  background-size: cover;
+}
 
-
-
-/*Atención al Cliente*/
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+// Atención al Cliente
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 input[type=number] { -moz-appearance:textfield; }
@@ -1390,7 +1434,7 @@ input[type=number] { -moz-appearance:textfield; }
         text-align: center;
         margin: 10px 0;
         font-weight: 800;
-      } 
+      }
       form{
         background-color: $white;
         width: 35%;
@@ -1418,7 +1462,7 @@ input[type=number] { -moz-appearance:textfield; }
         outline: none;
         color: rgb(94,93,93);
       }
-      input:focus~label, input:valid~label, 
+      input:focus~label, input:valid~label,
       textarea:focus~label, textarea:valid~label{
           position: absolute;
           top: -14px;
@@ -1463,7 +1507,7 @@ input[type=number] { -moz-appearance:textfield; }
           width: 100px;
           height: 40px;
           border:none;
-          color:$white; 
+          color:$white;
           border-radius: 4px;
           font-size: 16px;
           margin: 10px auto;
@@ -1517,22 +1561,45 @@ footer{
 .footer-content-about p{
   line-height: 2;
 }
-.social-icons{
-  list-style: none;
+.sci{
   margin-bottom: 5.4rem;
   display: flex;
   justify-content: center;
-}
-.social-icons i{
-  font-size: 2rem;
-  color: $white;
-  padding: .8rem 2rem;
-  opacity: .5;
-  transition: color .5s;
-}
-.social-icons i:hover,
-.social-icons i:focus{
-  color: var(--secondary-font-color);
+      li{
+        list-style: none;
+      }
+      li a{
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: #222;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+        text-decoration: none;
+        border-radius: 4px;
+            .fa{
+              color: $white;
+              font-size: 20px;
+            }
+      }
+      li a:hover{
+        background: blue;
+      }
+      .fb li a:hover{
+        background: #3b5998;
+      }
+      .in li a:hover{
+        background: #d6249f;
+        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+      }
+      .tw li a:hover{
+        background: #55acee;
+      }
+      .yt li a:hover{
+        background: #bb0000;
+      }
 }
 .newsletter-form{
   width: 100%;
@@ -1572,4 +1639,15 @@ footer{
                 font-weight: bold;
             }
       }
+}
+
+.table{
+  background-color: #252627;
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #fff;
+  display: table;
+  text-indent: initial;
+  border-spacing: 2px;
+  border-color: grey;
 }
