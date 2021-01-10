@@ -60,9 +60,6 @@
     .padding-right{
         padding-right: 7rem;
     }
-    #popup-soda{
-        width: 600px;
-    }
     .footer-content{
         max-width: 77.5rem;
         margin: auto;
@@ -86,18 +83,10 @@
     .content-copy{
         padding: 8px 100px;
     }
+
 }
 
 /* Animaciones */
-@keyframes animate{
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(90deg);
-    }
-} 
-
 @keyframes fadeUp{
     0%{
         transform : translateY(4rem);
@@ -171,7 +160,7 @@
     }
     .swiper-slide{
         height:300px;
-    } 
+    }
 }
 
 /* Para que se vea bien el formulario */
@@ -193,7 +182,7 @@
     }
 }
 
-@media screen and (max-width: 300){
+@media screen and (max-width: 300px){
     .help form{
         width: 90%;
     }

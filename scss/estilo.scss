@@ -23,9 +23,6 @@
 // variables
 $white:#fff;
 $alturamin: 100vh;
-$fondo: #FFEFBA;
-$fondo: -webkit-linear-gradient(to bottom, #FFFFFF, #FFEFBA);
-$fondo: linear-gradient(to bottom, #FFFFFF, #FFEFBA);
 $maxwidth:1100px;
 
 
@@ -35,8 +32,9 @@ html{
   font-size: 11px;
   color: #031321;
   scroll-behavior: smooth;
-  background: $fondo;
-  display: block;
+  background: #FFEFBA;
+  background: -webkit-linear-gradient(to bottom, #FFFFFF, #FFEFBA);
+  background: linear-gradient(to bottom, #FFFFFF, #FFEFBA);
 }
 
 body{
@@ -83,17 +81,12 @@ header{
   background: linear-gradient(to bottom, rgba(0,0,0,.5), transparent);
 }
 
-// .relative{
-//   position: relative;
-// }
-
 .nav{
   height: 7.2rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 .menu-toggle{
   color: #fff;
   font-size: 2.2rem;
@@ -670,8 +663,8 @@ section.game {
                                   background-size: cover;
                                   width: 300px;
                                   height: 500px;
-                                  display:flex;
-                                  justify-content:center;
+                                  display: flex;
+                                  justify-content: center;
                                         img{
                                           position: absolute;
                                           bottom: 0;
@@ -998,22 +991,93 @@ section.navidad {
                 }
         }
         h2{
+          font-size: 3.5rem;
           font-weight: 600;
           margin-bottom: 10px;
-          color: #333;
+          color:#EC5054;
+          text-transform: uppercase;
         }
         .container-soda .content-soda img{
           max-width: 100%;
           display: block;
         }
-        a{
-          position: relative;
-          padding: 5px 20px;
-          display: inline-block;
-          margin-top: 20px;
-          text-decoration: none;
-          color: $white;
-          background: #111;
+        .button{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+                a{
+                  position: relative;
+                  display: inline-block;
+                  padding: 15px 30px;
+                  border: 2px solid #E51F2A;
+                  margin: 40px;
+                  text-transform: uppercase;
+                  font-weight: 600;
+                  text-decoration: none;
+                  letter-spacing: 2px;
+                  color: #E51F2A;
+                  -webkit-box-reflect: below 0px linear-gradient(transparent,#0002);
+                  transition: 0.5s;
+                  transition-delay: 0s;
+                        &:hover {
+                          transition-delay: 1.5s;
+                          color: $white;
+                          box-shadow: 0 0 10px #E51F2A,
+                                      0 0 20px #E51F2A,
+                                      0 0 40px #E51F2A,
+                                      0 0 80px #E51F2A,
+                                      0 0 160px #E51F2A;
+                        }
+                        span{
+                          position: relative;
+                          z-index: 100;
+                        }
+                        &::before{
+                          content: '';
+                          position: absolute;
+                          left: -20px;
+                          top: 50%;
+                          transform: translateY(-50%);
+                          width: 20px;
+                          height: 2px;
+                          background: #E51F2A;
+                          box-shadow: 5px -8px 0 #E51F2A,
+                                      5px 8px 0 #E51F2A;
+                          transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+                          transition-delay: 1s,0.5s,0s,0s;
+                        }
+                        &:hover::before{
+                          width: 60%;
+                          height: 100%;
+                          left: -2px;
+                          box-shadow: 5px 0 0 #E51F2A,
+                                      5px 0 0 #E51F2A;
+                          transition-delay: 0s,0.5s,1s,1s;
+                        }
+                        &::after{
+                          content: '';
+                          position: absolute;
+                          right: -20px;
+                          top: 50%;
+                          transform: translateY(-50%);
+                          width: 20px;
+                          height: 2px;
+                          background: #E51F2A;
+                          box-shadow: -5px -8px 0 #E51F2A,
+                                      -5px 8px 0 #E51F2A;
+                          transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+                          transition-delay: 1s,0.5s,0s,0s;
+                        }
+                        &:hover::after{
+                          width: 60%;
+                          height: 100%;
+                          right: -2px;
+                          box-shadow: -5px 0 0 #E51F2A,
+                                      -5px 0 0 #E51F2A;
+                          transition-delay: 0s,0.5s,1s,1s;
+                        }
+                }
         }
         #popup-soda{
           position: fixed;
@@ -1027,11 +1091,46 @@ section.navidad {
           visibility: hidden;
           opacity: 0;
           transition: 0.5s;
+          background: #161616;
                 &.active{
                   top: 50%;
                   visibility: visible;
                   opacity: 1;
                   transition: 0.5s;
+                }
+        }
+        table{
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          border-collapse: collapse;
+          border-spacing: 0;
+          font-weight: 600;
+          font-family: 'Poopins', sans-serif;
+                thead{
+                  background-color: #BF1111;
+                  color:#F2F2F2;
+                  font-size: 16px;
+                }
+                .tbody{
+                        tr{
+                          background-color: #011C26;
+                          color:#F2F2F2;
+                          font-size: 1.2rem;
+                        }
+                        tr:nth-child(even) {
+                          background-color: #173840;
+                        }
+                }
+                td{
+                  padding: 10px;
+                  text-align: center;
+                }
+                th{
+                  padding: 10px;
+                  text-align: center;
+                  text-transform: uppercase;
+                  letter-spacing: 1px;
                 }
         }
 }
@@ -1061,24 +1160,93 @@ section.navidad {
                 }
         }
         h2{
+          font-size: 3.5rem;
           font-weight: 600;
           margin-bottom: 10px;
-          color: #333;
+          color:#088AC5;
+          text-transform: uppercase;
         }
         .container-game .content-game img{
           max-width: 100%;
           display: block;
         }
-        a{
-          position: relative;
-          padding: 5px 20px;
-          display: inline-block;
-          margin-top: 20px;
-          text-decoration: none;
-          color: $white;
-          background: #111;
+        .button{
           display: flex;
           justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+                a{
+                  position: relative;
+                  display: inline-block;
+                  padding: 15px 30px;
+                  border: 2px solid #7DBBF3;
+                  margin: 40px;
+                  text-transform: uppercase;
+                  font-weight: 600;
+                  text-decoration: none;
+                  letter-spacing: 2px;
+                  color: #7DBBF3;
+                  -webkit-box-reflect: below 0px linear-gradient(transparent,#0002);
+                  transition: 0.5s;
+                  transition-delay: 0s;
+                        &:hover {
+                          transition-delay: 1.5s;
+                          color: $white;
+                          box-shadow: 0 0 10px #7DBBF3,
+                                      0 0 20px #7DBBF3,
+                                      0 0 40px #7DBBF3,
+                                      0 0 80px #7DBBF3,
+                                      0 0 160px #7DBBF3;
+                        }
+                        span{
+                          position: relative;
+                          z-index: 100;
+                        }
+                        &::before{
+                          content: '';
+                          position: absolute;
+                          left: -20px;
+                          top: 50%;
+                          transform: translateY(-50%);
+                          width: 20px;
+                          height: 2px;
+                          background: #7DBBF3;
+                          box-shadow: 5px -8px 0 #7DBBF3,
+                                      5px 8px 0 #7DBBF3;
+                          transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+                          transition-delay: 1s,0.5s,0s,0s;
+                        }
+                        &:hover::before{
+                          width: 60%;
+                          height: 100%;
+                          left: -2px;
+                          box-shadow: 5px 0 0 #7DBBF3,
+                                      5px 0 0 #7DBBF3;
+                          transition-delay: 0s,0.5s,1s,1s;
+                        }
+                        &::after{
+                          content: '';
+                          position: absolute;
+                          right: -20px;
+                          top: 50%;
+                          transform: translateY(-50%);
+                          width: 20px;
+                          height: 2px;
+                          background: #7DBBF3;
+                          box-shadow: -5px -8px 0 #7DBBF3,
+                                      -5px 8px 0 #7DBBF3;
+                          transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+                          transition-delay: 1s,0.5s,0s,0s;
+                        }
+                        &:hover::after{
+                          width: 60%;
+                          height: 100%;
+                          right: -2px;
+                          box-shadow: -5px 0 0 #7DBBF3,
+                                      -5px 0 0 #7DBBF3;
+                          transition-delay: 0s,0.5s,1s,1s;
+                        }
+                }
         }
         #popup-game{
           position: fixed;
@@ -1092,11 +1260,45 @@ section.navidad {
           visibility: hidden;
           opacity: 0;
           transition: 0.5s;
+          background-color: #0A1526;
                 &.active{
                   top: 50%;
                   visibility: visible;
                   opacity: 1;
                   transition: 0.5s;
+                }
+        }
+        table{
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          border-collapse: collapse;
+          border-spacing: 0;
+          font-weight: 600;
+          font-family: 'Poopins', sans-serif;
+                thead{
+                  background-color: #7DBBF3;
+                  color:#F2F2F2;
+                  font-size: 16px;
+                }
+                .tbody{
+                        tr{
+                          background-color: #1B2A41;
+                          color:#CCC9DC;
+                          font-size: 1.2rem;
+                        }
+                        tr:nth-child(even) {
+                          background-color: #324A5F;
+                        }
+                }
+                td{
+                  padding: 10px;
+                  text-align: center;
+                }
+                th{
+                  padding: 10px;
+                  text-align: center;
+                  letter-spacing: 1px;
                 }
         }
 }
@@ -1126,40 +1328,146 @@ section.navidad {
                 }
         }
         h2{
+          font-size: 3.5rem;
           font-weight: 600;
           margin-bottom: 10px;
-          color: #333;
+          color:#7353BA;
+          text-transform: uppercase;
         }
         .container-anime .content-anime img{
           max-width: 100%;
           display: block;
         }
-        a{
-          position: relative;
-          padding: 5px 20px;
-          display: inline-block;
-          margin-top: 20px;
-          text-decoration: none;
-          color: $white;
-          background: #111;
+        .button{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+                a{
+                  position: relative;
+                  display: inline-block;
+                  padding: 15px 30px;
+                  border: 2px solid #7353BA;
+                  margin: 40px;
+                  text-transform: uppercase;
+                  font-weight: 600;
+                  text-decoration: none;
+                  letter-spacing: 2px;
+                  color: #7353BA;
+                  -webkit-box-reflect: below 0px linear-gradient(transparent,#0002);
+                  transition: 0.5s;
+                  transition-delay: 0s;
+                        &:hover {
+                          transition-delay: 1.5s;
+                          color: $white;
+                          box-shadow: 0 0 10px #7353BA,
+                                      0 0 20px #7353BA,
+                                      0 0 40px #7353BA,
+                                      0 0 80px #7353BA,
+                                      0 0 160px #7353BA;
+                        }
+                        span{
+                          position: relative;
+                          z-index: 100;
+                        }
+                        &::before{
+                          content: '';
+                          position: absolute;
+                          left: -20px;
+                          top: 50%;
+                          transform: translateY(-50%);
+                          width: 20px;
+                          height: 2px;
+                          background: #7353BA;
+                          box-shadow: 5px -8px 0 #7353BA,
+                                      5px 8px 0 #7353BA;
+                          transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+                          transition-delay: 1s,0.5s,0s,0s;
+                        }
+                        &:hover::before{
+                          width: 60%;
+                          height: 100%;
+                          left: -2px;
+                          box-shadow: 5px 0 0 #7353BA,
+                                      5px 0 0 #7353BA;
+                          transition-delay: 0s,0.5s,1s,1s;
+                        }
+                        &::after{
+                          content: '';
+                          position: absolute;
+                          right: -20px;
+                          top: 50%;
+                          transform: translateY(-50%);
+                          width: 20px;
+                          height: 2px;
+                          background: #7353BA;
+                          box-shadow: -5px -8px 0 #7353BA,
+                                      -5px 8px 0 #7353BA;
+                          transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+                          transition-delay: 1s,0.5s,0s,0s;
+                        }
+                        &:hover::after{
+                          width: 60%;
+                          height: 100%;
+                          right: -2px;
+                          box-shadow: -5px 0 0 #7353BA,
+                                      -5px 0 0 #7353BA;
+                          transition-delay: 0s,0.5s,1s,1s;
+                        }
+                }
         }
         #popup-anime{
           position: fixed;
           top: 40%;
           left: 50%;
           transform: translate(-50%,-50%);
-          width: 600px;
+          width: 100%;
           padding: 50px;
           box-shadow:0 5px 30px rgba(0,0,0,.30);
           background: $white;
           visibility: hidden;
           opacity: 0;
           transition: 0.5s;
+          background-color: #161616;
                 &.active{
                   top: 50%;
                   visibility: visible;
                   opacity: 1;
                   transition: 0.5s;
+                }
+        }
+        table{
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          border-collapse: collapse;
+          border-spacing: 0;
+          font-weight: 600;
+          font-family: 'Poopins', sans-serif;
+                thead{
+                  background-color: #7353BA;
+                  border-bottom: solid 5px #ff000d00;
+                  color:#F2F2F2;
+                  font-size: 16px;
+                }
+                .tbody{
+                        tr{
+                          background-color: #A573AD;
+                          color:#F2F2F2;
+                          font-size: 1.2rem;
+                        }
+                        tr:nth-child(even) {
+                          background-color: #A67DB8;
+                        }
+                }
+                td{
+                  padding: 10px;
+                  text-align: center;
+                }
+                th{
+                  padding: 10px;
+                  text-align: center;
+                  letter-spacing: 1px;
                 }
         }
 }
@@ -1168,6 +1476,9 @@ section.navidad {
 //Porcentaje de navidad
 .prob-navidad{
   font-family: 'Poppins', sans-serif;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
         .container-navidad{
           position: relative;
           width: 100%;
@@ -1189,57 +1500,195 @@ section.navidad {
                 }
         }
         h2{
+          font-size: 3.5rem;
           font-weight: 600;
           margin-bottom: 10px;
-          color: #333;
+          color:#69995E;
+          text-transform: uppercase;
         }
         .container-navidad .content-navidad img{
           max-width: 100%;
           display: block;
         }
-        a{
-          position: relative;
-          padding: 5px 20px;
-          display: inline-block;
-          margin-top: 20px;
-          text-decoration: none;
-          color: $white;
-          background: #111;
+        .button{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+                a{
+                  position: relative;
+                  display: inline-block;
+                  padding: 15px 30px;
+                  border: 2px solid #69995E;
+                  margin: 40px;
+                  text-transform: uppercase;
+                  font-weight: 600;
+                  text-decoration: none;
+                  letter-spacing: 2px;
+                  color: #69995E;
+                  -webkit-box-reflect: below 0px linear-gradient(transparent,#0002);
+                  transition: 0.5s;
+                  transition-delay: 0s;
+                        &:hover {
+                          transition-delay: 1.5s;
+                          color: $white;
+                          box-shadow: 0 0 10px #69995E,
+                                      0 0 20px #69995E,
+                                      0 0 40px #69995E,
+                                      0 0 80px #69995E,
+                                      0 0 160px #69995E;
+                        }
+                        span{
+                          position: relative;
+                          z-index: 100;
+                        }
+                        &::before{
+                          content: '';
+                          position: absolute;
+                          left: -20px;
+                          top: 50%;
+                          transform: translateY(-50%);
+                          width: 20px;
+                          height: 2px;
+                          background: #69995E;
+                          box-shadow: 5px -8px 0 #69995E,
+                                      5px 8px 0 #69995E;
+                          transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+                          transition-delay: 1s,0.5s,0s,0s;
+                        }
+                        &:hover::before{
+                          width: 60%;
+                          height: 100%;
+                          left: -2px;
+                          box-shadow: 5px 0 0 #69995E,
+                                      5px 0 0 #69995E;
+                          transition-delay: 0s,0.5s,1s,1s;
+                        }
+                        &::after{
+                          content: '';
+                          position: absolute;
+                          right: -20px;
+                          top: 50%;
+                          transform: translateY(-50%);
+                          width: 20px;
+                          height: 2px;
+                          background: #69995E;
+                          box-shadow: -5px -8px 0 #69995E,
+                                      -5px 8px 0 #69995E;
+                          transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+                          transition-delay: 1s,0.5s,0s,0s;
+                        }
+                        &:hover::after{
+                          width: 60%;
+                          height: 100%;
+                          right: -2px;
+                          box-shadow: -5px 0 0 #69995E,
+                                      -5px 0 0 #69995E;
+                          transition-delay: 0s,0.5s,1s,1s;
+                        }
+                }
         }
         #popup-navidad{
           position: fixed;
           top: 40%;
           left: 50%;
           transform: translate(-50%,-50%);
-          width: 600px;
+          width: 100%;
           padding: 50px;
           box-shadow:0 5px 30px rgba(0,0,0,.30);
           background: $white;
           visibility: hidden;
           opacity: 0;
           transition: 0.5s;
+          background-color: #000000;
                 &.active{
                   top: 50%;
                   visibility: visible;
                   opacity: 1;
                   transition: 0.5s;
                 }
-        }
+              }
+              table{
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                border-collapse: collapse;
+                border-spacing: 0;
+                font-weight: 600;
+                font-family: 'Poopins', sans-serif;
+                      thead{
+                        background-color: #69995E;
+                        border-bottom: solid 5px #ff000d00;
+                        color:#F2F2F2;
+                        font-size: 16px;
+                      }
+                      .tbody{
+                              tr{
+                                background-color: #8B939C;
+                                color:#F2F2F2;
+                                font-size: 1.2rem;
+                              }
+                              tr:nth-child(even) {
+                                background-color: #30343F;
+                              }
+                      }
+                      td{
+                        padding: 10px;
+                        text-align: center;
+                      }
+                      th{
+                        padding: 10px;
+                        text-align: center;
+                        letter-spacing: 1px;
+                      }
+              }
 }
 //Fin de seccion de probabilidades navidad
 
+
+// Seccion de clientes-review
+// Presentacion de seccion clientes-review
+.client-review{
+  background: url("img/presentacion-cliente-reviews.jpg") center no-repeat;
+  background-size: cover;
+  width: 100%;
+        .sub-headline{
+          color: var(--secondary-font-color);
+          font-weight: 550;
+          font-size: 10rem;
+          letter-spacing: 9px;
+          width: 100%;
+        }
+        .animate-bottom{
+              h1{
+                -webkit-text-stroke: 2px #0A1526;
+                font-size: 2.5rem;
+                padding: 20px;
+                width: 100%;
+              }
+              a{
+                -webkit-text-stroke: 1px #0A1526;
+                color: var(--secondary-font-color);
+                letter-spacing: 0;
+                width: 100%;
+              }
+        }
+}
+// Fin de presentacion
+
+// clientes-reviews
 .clientes{
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
   flex-wrap: wrap;
   transform-style: preserve-3d;
   width: 100%;
-  min-height: 100vh;
   font-family: 'Poppins', sans-serif;
         .card-cli{
           position: relative;
-          width: 335px;
+          width: 400px;
           height: 500px;
           margin: 20px;
           transform-style: preserve-3d;
@@ -1305,107 +1754,12 @@ section.navidad {
                 }
         }
 }
+// fin de clientes
+// Fin de seccion clientes-reviews
 
 
 
-// Presentacion de seccion clientes-review
-.client-review{
-  background: url("img/presentacion-cliente-reviews.jpg") center no-repeat;
-  background-size: cover;
-  width: 100%;
-        .sub-headline{
-          color: var(--secondary-font-color);
-          font-weight: 550;
-          font-size: 10rem;
-          letter-spacing: 9px;
-          width: 100%;
-        }
-        .animate-bottom{
-              h1{
-                -webkit-text-stroke: 2px #0A1526;
-                font-size: 2.5rem;
-                padding: 20px;
-                width: 100%;
-              }
-              a{
-                -webkit-text-stroke: 1px #0A1526;
-                color: var(--secondary-font-color);
-                letter-spacing: 0;
-                width: 100%;
-              }
-        }
-}
-
-/*Reseñas*/
-.reviews{
-	max-width: $maxwidth - 100;
-	margin: 0 auto;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-  padding-top: 8%;
-      /*.p{
-        margin-left: 80px;
-        margin-right: 80px;
-        margin-bottom: 1em;
-        font: 120% sans-serif;
-        text-align: justify;
-      }
-      */
-      a{
-        margin-left: 80px;
-        margin-right: 80px;
-        font: 120% sans-serif;
-        color: #031926;
-        text-decoration:none;
-      }
-      .card{
-        position: relative;
-        margin: 20px 0;
-        width: 300px;
-        height: 400px;
-        background: $white;
-        transform-style: preserve-3d;
-        transform: perspective(2000px);
-        transition: 1s;
-        box-shadow: inset 300px 0 50px rgba(0,0,0,.5);
-            &:hover{
-              z-index: 100000;
-              transform: perspective(2000px) rotate(-10deg);
-              box-shadow: inset 20px 0 50px rgba(0,0,0,.5);
-            }
-            .img-box{
-              position: relative;
-              width: 100%;
-              height: 100%;
-              border: 1px solid #000;
-              box-sizing: border-box;
-              transform-origin: left;
-              z-index: 1000;
-              transition: 1s;
-            }
-            &:hover .img-box{
-              transform: rotateY(-135deg);
-            }
-            .img-box .img{
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-            }
-            .details{
-              position: absolute;
-              top: 0;
-              left: 0;
-              box-sizing: border-box;
-              padding: 20px;
-            }
-      }
-}
-
-// Presentacion de la seccion cajas misterirosas
+// Presentacion de atencion al cliente
 .contact{
   background: url("img/presentacion-fondo-contacto.jpg") center no-repeat;
   background-size: cover;
@@ -1639,15 +1993,4 @@ footer{
                 font-weight: bold;
             }
       }
-}
-
-.table{
-  background-color: #252627;
-  width: 100%;
-  margin-bottom: 1rem;
-  color: #fff;
-  display: table;
-  text-indent: initial;
-  border-spacing: 2px;
-  border-color: grey;
 }
